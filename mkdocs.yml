@@ -1,5 +1,7 @@
 site_name: 老闫玩儿技术
 site_url: https://yanzhg.github.io/netyourlife/
+# 新增base配置，解决网页解析失败核心问题（与仓库路径完全匹配）
+base: /netyourlife/
 theme:
   name: material
   palette:
@@ -15,16 +17,21 @@ theme:
     - navigation.expand
     - search.suggest
     - search.highlight
-    - navigation.side
+    - navigation.side # 强制显示左侧侧边栏
+    - navigation.indexes # 启用目录索引，确保文档能被识别
 
 plugins:
   - search
   - autorefs
-  - mkdocstrings:
-      default_handler: python
+  # 移除多余插件（mkdocstrings无用，会导致部署冗余、解析报错）
+  - mkdocs-autolinks-plugin # 新增自动链接插件，辅助目录识别
 
-# 强制启用自动目录，兼容所有文档结构，解决目录不显示核心问题
+# 手动+自动结合，确保目录必显示（适配你的文档结构）
 nav:
   - 首页: index.md
+  # 手动指定文档路径（若有其他文档，按此格式添加，替换文件名即可）
   - 技术文档:
-      - 自动识别所有文档: index.md
+      - 示例文档（可替换）: index.md
+      # 若有其他文档，直接添加，如：
+      # - 交换机配置: 交换机配置.md
+      # - 防火墙策略: 防火墙策略.md

@@ -3,7 +3,7 @@ name: mkdocs gh-deploy
 on:
   push:
     branches:
-      - main
+      - main # 确认你的仓库主分支是main（若为master，此处改为master）
 
 jobs:
   build:
@@ -11,14 +11,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # 关键：解决部署时文档读取不全，导致目录不显示
+          fetch-depth: 0 # 确保读取所有文档，避免目录识别不全
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+          cache: "pip" # 新增缓存，加快部署速度，避免依赖安装失败
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install mkdocs-material mkdocstrings
+          # 安装必要插件，移除无用插件，避免部署报错
+          pip install mkdocs-material mkdocs-autolinks-plugin
       - name: Build and deploy
-        run: mkdocs gh-deploy --force --clean # 新增--clean，清除旧部署缓存，解决网页解析失败
+        run: mkdocs gh-deploy --force --clean --verbose # 新增--verbose，便于排查部署错误
