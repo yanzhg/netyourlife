@@ -1,0 +1,27 @@
+site_name: 老闫玩儿技术
+site_url: https://yanzhg.github.io/netyourlife/
+theme:
+  name: material
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: 切换暗黑模式
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: 切换明亮模式
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+
+plugins:
+  - search
+  - autorefs
+
+nav:
+  - 首页: index.md
+# 目录自动生成，无需手动添加，文件夹结构即目录
