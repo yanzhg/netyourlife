@@ -12,8 +12,6 @@ theme:
         icon: material/brightness-4
         name: 切换明亮模式
   features:
-    - navigation.tabs
-    - navigation.sections
     - navigation.expand
     - search.suggest
     - search.highlight
@@ -22,6 +20,5 @@ plugins:
   - search
   - autorefs
 
-nav:
-  - 首页: index.md
-# 目录自动生成，无需手动添加，文件夹结构即目录
+# 启用自动目录，无需手动配置，文件夹结构即目录
+nav: []
