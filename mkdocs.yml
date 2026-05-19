@@ -15,10 +15,16 @@ theme:
     - navigation.expand
     - search.suggest
     - search.highlight
+    - navigation.side
 
 plugins:
   - search
   - autorefs
+  - mkdocstrings:
+      default_handler: python
 
-# 启用自动目录，无需手动配置，文件夹结构即目录
-nav: []
+# 强制启用自动目录，兼容所有文档结构，解决目录不显示核心问题
+nav:
+  - 首页: index.md
+  - 技术文档:
+      - 自动识别所有文档: index.md
