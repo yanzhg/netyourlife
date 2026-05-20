@@ -1,4 +1,6 @@
 site_name: 老闫玩儿技术
+site_url: https://yanzhg.github.io/netyourlife/
+base: /netyourlife/
 nav:
   - 首页: index.md
   - 网络安全:
