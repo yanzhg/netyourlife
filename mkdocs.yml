@@ -4,30 +4,17 @@ base: /netyourlife/
 
 theme:
   name: material
-  palette:
-    - scheme: default
-      toggle:
-        icon: material/brightness-7
-        name: 暗黑模式
-    - scheme: slate
-      toggle:
-        icon: material/brightness-4
-        name: 明亮模式
   features:
     - navigation.expand
-    - navigation.top
-    - search.suggest
-    - search.highlight
+    - navigation.sections
 
-plugins:
-  - search
-
-# 👇 👇 👇 这是你完整的左侧目录（我已经按你的文档全部写好）
 nav:
   - 首页: index.md
   - 网络安全:
-      - iptables与ufw对比 + 常用封禁IP、网段放行端口策略: 网络安全/iptables 与 ufw 对比 + 常用封禁 IP、网段放行端口策略.md
-      - 生产服务器标准防火墙规则模板: 网络安全/生产服务器标准防火墙规则模板（iptables + ufw 两套可直接复制）.md
-      - 网络设备配置 国密加密备份 一键脚本: 网络安全/网络设备配置 国密加密备份 一键脚本（可直接上线）.md
+      - iptables防火墙: 网络安全/iptables 与 ufw 对比 + 常用封禁 IP、网段放行端口策略.md
+      - 服务器防火墙模板: 网络安全/生产服务器标准防火墙规则模板（iptables + ufw 两套可直接复制）.md
+      - 网络设备国密备份: 网络安全/网络设备配置 国密加密备份 一键脚本（可直接上线）.md
   - 网络技术:
-      - Wireshark安装使用指南: 网络技术/Wireshark安装使用指南.md
+      - Wireshark指南: 网络技术/Wireshark安装使用指南.md
+  - 工具:
+      - kopia同步: kopia 异地仓库同步.md
