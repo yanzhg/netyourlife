@@ -1,6 +1,15 @@
 site_name: 老闫玩儿技术
 site_url: https://yanzhg.github.io/netyourlife/
 base: /netyourlife/
+
+theme:
+  name: material
+  features:
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+    - search.suggest
+
 nav:
   - 首页: index.md
   - 网络安全:
@@ -9,12 +18,3 @@ nav:
       - Wireshark: 网络技术/Wireshark安装使用指南.md
   - 工具:
       - kopia同步: kopia 异地仓库同步.md
-
-
-#theme: cerulean
-#theme: readthedocs
-
-theme:
-    name: flatly
-#    nav_style: dark
-
