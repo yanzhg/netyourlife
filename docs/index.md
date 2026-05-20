@@ -1,7 +1,3 @@
----
-hide:
-  - navigation
----
 
 # 老闫玩儿技术
 
