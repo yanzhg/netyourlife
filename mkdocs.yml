@@ -2,14 +2,16 @@ site_name: 老闫玩儿技术
 site_url: https://yanzhg.github.io/netyourlife/
 base: /netyourlife/
 
+
+#theme: cerulean
+#theme: readthedocs
+
 theme:
-  name: material
-  features:
-    - navigation.expand
-    - navigation.sections
+    name: flatly
+#    nav_style: dark
 
 nav:
-  - 首页: index.md
+  - 主页: index.md
   - 网络安全:
       - iptables防火墙: 网络安全/iptables 与 ufw 对比 + 常用封禁 IP、网段放行端口策略.md
       - 服务器防火墙模板: 网络安全/生产服务器标准防火墙规则模板（iptables + ufw 两套可直接复制）.md
@@ -18,3 +20,4 @@ nav:
       - Wireshark指南: 网络技术/Wireshark安装使用指南.md
   - 工具:
       - kopia同步: kopia 异地仓库同步.md
+
