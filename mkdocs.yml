@@ -1,20 +1,29 @@
-site_name: 老闫玩儿技术
+site_name: 老闫玩儿网络
 site_url: https://yanzhg.github.io/netyourlife/
-base: /netyourlife/
 
 theme:
   name: material
   features:
-    - navigation.expand
+    - navigation.expand       # 默认展开一级目录
+    - navigation.fold         # 开启子目录折叠（量大必开）
     - navigation.top
     - toc.integrate
     - search.suggest
+  # 侧边栏宽度微调，适配长文件名
+  sidebar_width: 300
 
-nav:
-  - 首页: index.md
-  - 网络安全:
-      - iptables与ufw: 网络安全/iptables与ufw对比.md
-  - 网络技术:
-      - Wireshark: 网络技术/Wireshark安装使用指南.md
-  - 工具:
-      - kopia同步: kopia 异地仓库同步.md
+plugins:
+  - search
+  - awesome-pages:
+      # 自动排序：按文件名排序，也可按修改时间
+      sort:
+        by: filename
+        direction: asc
+      # 忽略不想显示的文件/文件夹
+      exclude:
+        - README.md
+        - 草稿*
+        - 临时*.md
+
+# 空nav全权交给插件自动生成
+nav: []
