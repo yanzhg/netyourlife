@@ -1,16 +1,58 @@
-site_name: 老闫玩儿网络
+site_name: 老闫玩儿技术
 site_url: https://yanzhg.github.io/netyourlife/
 
+# 网站顶部logo/标题美化
+site_description: 网络运维 | 安全合规 | 实战技术笔记
+site_author: 老闫
+
+# 主题美化全套
 theme:
   name: material
+  # 主色调
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: 切换深色模式
+    - scheme: slate
+      primary: blue
+      accent: blue
+      toggle:
+        icon: material/brightness-4
+        name: 切换浅色模式
+
+  # 界面功能美化
   features:
-    - navigation.expand
-    - navigation.top
-    - toc.integrate
-    - search.suggest
+    - navigation.expand       # 默认展开一级目录
+    - navigation.fold         # 子目录可折叠，文档再多不乱
+    - navigation.top          # 回到顶部按钮
+    - toc.integrate           # 右侧文章内目录嵌入侧边
+    - search.suggest          # 搜索联想
+    - search.highlight        # 搜索关键词高亮
+    - content.code.copy       # 代码一键复制
+    - content.code.annotate   # 代码注释悬浮提示
 
+  # 侧边栏宽度适配长文件名
+  sidebar_width: 320
+
+# 内置插件（仅自带搜索，无第三方不报错）
 plugins:
-  - search
+  - search:
+      lang: zh
+      separator: '[\s\-\.，。、]'
 
-# 👇 这行是空的 → 代表让 MkDocs 自动扫描所有文件夹、所有文档
+# 空导航 = 全自动读取文件夹生成目录
 nav: []
+
+# 全局字体美化
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/yanzhg
+  generator: false  # 隐藏底部mkdocs官方小字
+
+# 自定义CSS美化（极简清爽）
+extra_css:
+  - assets/style.css
