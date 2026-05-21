@@ -4,26 +4,13 @@ site_url: https://yanzhg.github.io/netyourlife/
 theme:
   name: material
   features:
-    - navigation.expand       # 默认展开一级目录
-    - navigation.fold         # 开启子目录折叠（量大必开）
+    - navigation.expand
     - navigation.top
     - toc.integrate
     - search.suggest
-  # 侧边栏宽度微调，适配长文件名
-  sidebar_width: 300
 
 plugins:
   - search
-  - awesome-pages:
-      # 自动排序：按文件名排序，也可按修改时间
-      sort:
-        by: filename
-        direction: asc
-      # 忽略不想显示的文件/文件夹
-      exclude:
-        - README.md
-        - 草稿*
-        - 临时*.md
 
-# 空nav全权交给插件自动生成
+# 👇 这行是空的 → 代表让 MkDocs 自动扫描所有文件夹、所有文档
 nav: []
