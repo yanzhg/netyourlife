@@ -1,0 +1,13 @@
+{
+  "name": "netyourlife",
+  "pages": {
+    "build": {
+      "buildCommand": "pip install mkdocs mkdocs-material && mkdocs build -f mkdocs.yml",
+      "outputDirectory": "site",
+      "rootDirectory": "/"
+    },
+    "deployment": {
+      "branch": "main"
+    }
+  }
+}
