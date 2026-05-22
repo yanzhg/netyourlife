@@ -3,7 +3,8 @@
   "pages": {
     "build": {
       "buildCommand": "pip install mkdocs mkdocs-material && mkdocs build",
-      "outputDirectory": "site"
+      "outputDirectory": "site",
+      "rootDirectory": "/"
     },
     "deployment": {
       "branch": "main"
