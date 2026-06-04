@@ -92,7 +92,7 @@ EVPN通过不同类型的BGP路由，承载VXLAN组网的所有控制信息，�
 
 适配设备：Catalyst 9300/3850 全系支持EVPN\+VXLAN
 
-```Plain Text
+```plaintext
 # 进入特权、全局模式
 enable
 configure terminal
@@ -158,7 +158,7 @@ router bgp 65001
 
 ### Cisco 设备验证命令（生产常用）
 
-```Plain Text
+```plaintext
 show bgp l2vpn evpn summary    # 查看EVPN邻居状态
 show bgp l2vpn evpn            # 查看Type2/Type3/Type5路由
 show vxlan tunnel               # 查看动态生成的VXLAN隧道
@@ -171,7 +171,7 @@ show ip route                   # 查看跨网段EVPN路由
 
 适配设备：华为 CE5800/CE6800 数据中心交换机
 
-```Plain Text
+```plaintext
 # 进入系统视图
 system-view
 sysname SW2
@@ -241,7 +241,7 @@ quit
 
 ### 华为设备验证命令（生产必用）
 
-```Plain Text
+```plaintext
 display bgp evpn peer         # 查看EVPN邻居UP状态
 display bgp evpn route        # 查看完整EVPN路由条目
 display vxlan tunnel          # 查看动态VXLAN隧道列表

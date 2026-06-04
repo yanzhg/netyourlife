@@ -149,7 +149,7 @@ ip route 2.2.2.2 255.255.255.255 <下一跳IP>
 
 ### Cisco 验证命令
 
-```Plain Text
+```plaintext
 show vxlan tunnel
 show vxlan vni
 show running-config | section vxlan
@@ -161,7 +161,7 @@ show running-config | section vxlan
 
 设备：华为 CE6800/CE5800/S5735 等支持 VXLAN 设备通用
 
-```Plain Text
+```plaintext
 # 进入系统视图
 system-view
 
@@ -196,7 +196,7 @@ ip route-static 1.1.1.1 255.255.255.255 <下一跳IP>
 
 ### 华为验证命令
 
-```Plain Text
+```plaintext
 display vxlan tunnel
 display vsi brief
 display vxlan vtep
