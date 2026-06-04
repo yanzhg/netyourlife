@@ -110,7 +110,7 @@ PC1、PC2 同网段，跨越三层物理网络，通过 VXLAN 隧道实现二层
 
 设备：Cisco Catalyst 3650/3850/9300 通用配置
 
-```Plain Text
+```plaintext
 # 进入全局配置模式
 enable
 configure terminal
