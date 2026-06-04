@@ -206,4 +206,3 @@ tc qdisc del dev eth0 ingress 2>/dev/null
 echo "网络规则已全部清空，恢复默认环境"
 ```
 
-> （注：文档部分内容可能由 AI 生成）
