@@ -30,13 +30,13 @@ Nmap（Network Mapper）是一款开源、跨平台、多功能的网络探测�
 
 CentOS / RHEL：
 
-```plain text
+```plaintext
 yum install nmap -y
 ```
 
 Ubuntu / Debian：
 
-```plain text
+```plaintext
 apt install nmap -y
 ```
 
@@ -46,13 +46,13 @@ apt install nmap -y
 
 方式二：Chocolatey 包管理器一键安装：
 
-```plain text
+```plaintext
 choco install nmap
 ```
 
 ### 3\. 验证安装
 
-```plain text
+```plaintext
 nmap -v
 ```
 
@@ -62,7 +62,7 @@ nmap -v
 
 默认扫描常用1000个端口，快速检测端口开放与服务：
 
-```plain text
+```plaintext
 nmap 192.168.1.100
 ```
 
@@ -70,7 +70,7 @@ nmap 192.168.1.100
 
 支持网段、范围、多个IP批量探测：
 
-```plain text
+```plaintext
 # 整个网段扫描
 nmap 192.168.1.0/24
 
@@ -83,7 +83,7 @@ nmap 192.168.1.10 192.168.1.20
 
 ### 3\. 简单端口指定扫描
 
-```plain text
+```plaintext
 # 单个端口
 nmap -p 80 192.168.1.100
 
@@ -100,7 +100,7 @@ nmap -p 1-1000 192.168.1.100
 
 ### 全端口扫描命令（1\-65535）
 
-```plain text
+```plaintext
 nmap -p 1-65535 192.168.1.100
 ```
 
@@ -118,7 +118,7 @@ nmap -p 1-65535 192.168.1.100
 
 ### 仅探测存活主机，不扫描端口（速度极快）
 
-```plain text
+```plaintext
 nmap -sn 192.168.1.0/24
 ```
 
@@ -132,7 +132,7 @@ Nmap 核心高阶能力：不仅知道端口开没开，还能精准识别 **服
 
 ### 1\. 探测服务版本
 
-```plain text
+```plaintext
 nmap -sV 192.168.1.100
 ```
 
@@ -140,13 +140,13 @@ nmap -sV 192.168.1.100
 
 ### 2\. 探测操作系统版本
 
-```plain text
+```plaintext
 nmap -O 192.168.1.100
 ```
 
 ### 3\. 综合深度探测（版本\+系统\+详细信息）
 
-```plain text
+```plaintext
 nmap -sV -O -v 192.168.1.100
 ```
 
@@ -176,7 +176,7 @@ Nmap 属于网络探测工具，**滥用会涉及网络安全违规**，运维�
 
 ## 八、运维高频核心参数详解
 
-```plain text
+```plaintext
 -sn      只探测存活主机，不扫端口
 -p       指定端口/端口范围
 -sV      服务版本探测
@@ -200,7 +200,7 @@ Nmap 属于网络探测工具，**滥用会涉及网络安全违规**，运维�
 
 ### Nmap 内网自动巡检脚本
 
-```plain text
+```plaintext
 #!/bin/bash
 # Nmap内网自动化巡检脚本
 DATE=$(date +%Y%m%d_%H%M%S)
@@ -220,7 +220,7 @@ echo "巡检完成，日志已保存至：$LOG_DIR"
 
 ### 脚本使用方法
 
-```plain text
+```plaintext
 chmod +x nmap_scan.sh
 ./nmap_scan.sh
 ```
