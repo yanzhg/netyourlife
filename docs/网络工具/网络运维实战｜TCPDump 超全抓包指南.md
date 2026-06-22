@@ -20,19 +20,19 @@ TCPDump 是 Linux 系统原生、轻量级、高性能的命令行抓包工具�
 
 ### 1\. CentOS / RHEL
 
-```Plain Text
+```plaintext
 yum install tcpdump -y
 ```
 
 ### 2\. Ubuntu / Debian
 
-```Plain Text
+```plaintext
 apt install tcpdump -y
 ```
 
 ### 3\. 查看版本（验证安装）
 
-```Plain Text
+```plaintext
 tcpdump --version
 ```
 
@@ -42,7 +42,7 @@ TCPDump 命令语法灵活，支持网卡、IP、端口、协议多层过滤，�
 
 ### 1\. 查看服务器所有网卡
 
-```Plain Text
+```plaintext
 tcpdump -D
 ```
 
@@ -50,7 +50,7 @@ tcpdump -D
 
 ### 2\. 监听指定网卡所有流量
 
-```Plain Text
+```plaintext
 tcpdump -i eth0
 ```
 
@@ -58,7 +58,7 @@ tcpdump -i eth0
 
 ### 3\. 不解析域名、纯IP输出
 
-```Plain Text
+```plaintext
 tcpdump -i eth0 -n
 ```
 
@@ -66,7 +66,7 @@ tcpdump -i eth0 -n
 
 ### 4\. 实时输出详细协议内容
 
-```Plain Text
+```plaintext
 tcpdump -i eth0 -nnv
 ```
 
@@ -78,7 +78,7 @@ tcpdump -i eth0 -nnv
 
 ### 1\. 只抓取指定 IP 流量
 
-```Plain Text
+```plaintext
 tcpdump -i eth0 -nn host 192.168.1.100
 ```
 
@@ -86,7 +86,7 @@ tcpdump -i eth0 -nn host 192.168.1.100
 
 ### 2\. 只抓取指定源IP / 目的IP
 
-```Plain Text
+```plaintext
 # 源IP
 tcpdump -i eth0 -nn src host 192.168.1.100
 # 目的IP
@@ -95,7 +95,7 @@ tcpdump -i eth0 -nn dst host 192.168.1.100
 
 ### 3\. 抓取指定端口流量
 
-```Plain Text
+```plaintext
 # 单个端口
 tcpdump -i eth0 -nn port 8080
 # 多个端口
@@ -104,7 +104,7 @@ tcpdump -i eth0 -nn port 80 or port 443
 
 ### 4\. 抓取指定协议流量
 
-```Plain Text
+```plaintext
 # TCP
 tcpdump -i eth0 -nn tcp
 # UDP
@@ -115,7 +115,7 @@ tcpdump -i eth0 -nn icmp
 
 ### 5\. 组合条件过滤（生产最常用）
 
-```Plain Text
+```plaintext
 # 抓取指定IP+指定端口TCP流量
 tcpdump -i eth0 -nn host 192.168.1.100 and port 3306 and tcp
 ```
@@ -128,7 +128,7 @@ tcpdump -i eth0 -nn host 192.168.1.100 and port 3306 and tcp
 
 ### 1\. 保存为 pcap 格式
 
-```Plain Text
+```plaintext
 tcpdump -i eth0 -nn host 192.168.1.100 -w /tmp/traffic.pcap
 ```
 
@@ -136,7 +136,7 @@ tcpdump -i eth0 -nn host 192.168.1.100 -w /tmp/traffic.pcap
 
 ### 2\. 限制抓包数量，避免文件过大
 
-```Plain Text
+```plaintext
 tcpdump -i eth0 -nn -c 10000 -w /tmp/traffic.pcap
 ```
 
@@ -162,7 +162,7 @@ TCPDump 虽轻量，但错误使用依然会导致**服务器卡顿、磁盘爆�
 
 ### 2\. 后台静默抓包，不占用终端
 
-```Plain Text
+```plaintext
 nohup tcpdump -i eth0 -nn port 443 -w /tmp/443.pcap 
 ```
 
@@ -176,7 +176,7 @@ nohup tcpdump -i eth0 -nn port 443 -w /tmp/443.pcap
 
 后台运行的 tcpdump 不会自动退出，排查结束后需查找并 kill 进程，避免常驻占用资源。
 
-```Plain Text
+```plaintext
 ps -ef | grep tcpdump
 kill -9 进程ID
 ```
