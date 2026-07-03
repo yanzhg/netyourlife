@@ -4,5 +4,4 @@
 这里是「老闫玩儿网络」博客，我会持续分享一手实战组网、排错实操干货，用真实项目经验，助力同行与后辈稳步成长。
 网线连通数字世界，热爱温柔寻常生活。深耕网络，永远热忱。
 
-URL：https://yanzhg.github.io/netyourlife/
-         https://netyourlife.pages.dev/
+URL：https://yanzhg.github.io/netyourlife/,  https://netyourlife.pages.dev/
