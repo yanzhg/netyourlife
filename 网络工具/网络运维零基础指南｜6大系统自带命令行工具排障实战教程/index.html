@@ -1,0 +1,2421 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://yanzhg.github.io/netyourlife/%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4%E9%9B%B6%E5%9F%BA%E7%A1%80%E6%8C%87%E5%8D%97%EF%BD%9C6%E5%A4%A7%E7%B3%BB%E7%BB%9F%E8%87%AA%E5%B8%A6%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7%E6%8E%92%E9%9A%9C%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/">
+      
+      
+        <link rel="prev" href="../%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4%E5%AE%9E%E6%88%98%EF%BD%9CTCPDump%20%E8%B6%85%E5%85%A8%E6%8A%93%E5%8C%85%E6%8C%87%E5%8D%97/">
+      
+      
+        <link rel="next" href="../%E8%BF%90%E7%BB%B4%E5%BF%85%E5%A4%87%E7%A5%9E%E5%99%A8%EF%BD%9CFinalShell%20%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AE%8C%E6%95%B4%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>网络运维零基础指南｜6大系统自带命令行工具故障排障实战教程 - 老闫玩儿技术</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#6" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="老闫玩儿技术" class="md-header__button md-logo" aria-label="老闫玩儿技术" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            老闫玩儿技术
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              网络运维零基础指南｜6大系统自带命令行工具故障排障实战教程
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="切换至深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="切换至浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="老闫玩儿技术" class="md-nav__button md-logo" aria-label="老闫玩儿技术" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    老闫玩儿技术
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    老闫玩儿网络
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    智能运维
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    智能运维
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%99%BA%E8%83%BD%E8%BF%90%E7%BB%B4/%E4%BC%A0%E7%BB%9F%E4%BA%BA%E5%B7%A5%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4%20VS%20AI%E6%99%BA%E8%83%BD%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4%EF%BC%9A%E8%BF%90%E7%BB%B4%E6%A8%A1%E5%BC%8F%E5%8F%98%E9%9D%A9%E4%B8%8E%E8%90%BD%E5%9C%B0%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    传统人工网络运维 VS AI智能网络运维：运维模式变革与落地实践指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络安全
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    网络安全
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/iptables%E4%B8%8Eufw%E5%AF%B9%E6%AF%94/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    iptables 与 ufw 对比 + 常用封禁 IP、网段放行端口策略
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/%E4%B8%AD%E5%B0%8F%E4%BC%81%E4%B8%9A%E9%9B%B6%E6%88%90%E6%9C%AC%E5%BC%80%E6%BA%90%E5%AE%89%E5%85%A8%E9%97%AD%E7%8E%AF%EF%BD%9C%E5%85%A8%E5%A5%97%E5%8F%AF%E8%90%BD%E5%9C%B0%E5%AE%9E%E6%93%8D%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中小企业零成本开源安全闭环｜全套可落地实操部署方案
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/%E7%94%9F%E4%BA%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A0%87%E5%87%86%E9%98%B2%E7%81%AB%E5%A2%99%E8%A7%84%E5%88%99%E6%A8%A1%E6%9D%BF%EF%BC%88iptables%20%2B%20ufw%20%E4%B8%A4%E5%A5%97%E5%8F%AF%E7%9B%B4%E6%8E%A5%E5%A4%8D%E5%88%B6%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    生产服务器标准防火墙规则模板（iptables + ufw 两套可直接复制）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/%E7%AD%89%E4%BF%9D%E6%B5%8B%E8%AF%84%E4%B8%AD%E5%A4%87%E4%BB%BD%E7%9B%AE%E5%BD%95%E7%9A%84%E5%AE%89%E5%85%A8%E6%95%B4%E6%94%B9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    等保测评中备份目录的安全整改
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%9B%B8%E5%85%B3%E7%9A%84%E6%B3%95%E5%BE%8B%E6%B3%95%E8%A7%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络安全相关的法律法规
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%AD%89%E7%BA%A7%E4%BF%9D%E6%8A%A4%202.0%20%E4%B8%89%E7%BA%A7%20%E6%8A%80%E6%9C%AF%E8%A6%81%E6%B1%82%20%2B%20%E8%87%AA%E6%9F%A5%E6%95%B4%E6%94%B9%E6%89%8B%E5%86%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络安全等级保护 2.0 三级 技术要求 + 自查整改手册
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87%E4%B8%8E%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE%E5%9F%BA%E7%BA%BF%E6%A0%B8%E6%9F%A5%E8%A7%84%E8%8C%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络设备与服务器安全配置基线核查规范
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87%E9%85%8D%E7%BD%AE%20%E5%9B%BD%E5%AF%86%E5%8A%A0%E5%AF%86%E5%A4%87%E4%BB%BD%20%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC%EF%BC%88%E5%8F%AF%E7%9B%B4%E6%8E%A5%E4%B8%8A%E7%BA%BF%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络设备配置 国密加密备份 一键脚本（可直接上线）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/%E8%AE%BE%E5%A4%87%E9%85%8D%E7%BD%AE%E5%A4%87%E4%BB%BD%E7%9B%AE%E5%BD%95%E5%AE%89%E5%85%A8%E6%95%B4%E6%94%B9%E6%8A%A5%E5%91%8A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    等保测评设备配置备份目录安全整改报告
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/%E9%9B%B6%E6%88%90%E6%9C%AC%E8%90%BD%E5%9C%B0%EF%BC%81%E4%B8%AD%E5%B0%8F%E4%BC%81%E4%B8%9A%E5%BC%80%E6%BA%90%E5%85%A8%E8%87%AA%E5%8A%A8%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4%E9%97%AD%E7%8E%AF%2B%E8%87%AA%E5%BB%BAIP%E4%BF%A1%E8%AA%89%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    零成本落地！中小企业开源全自动网络安全防护闭环+自建IP信誉系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络工具
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    网络工具
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linux%20TC%20%E7%BD%91%E7%BB%9C%E6%8E%92%E9%94%99%E5%AE%9E%E6%88%98%EF%BC%9A%E6%90%9E%E5%AE%9A%E5%BB%B6%E8%BF%9F%E3%80%81%E6%8A%96%E5%8A%A8%E3%80%81%E4%B8%A2%E5%8C%85%E3%80%81%E5%B8%A6%E5%AE%BD%E7%93%B6%E9%A2%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux TC 网络排错实战：搞定延迟、抖动、丢包、带宽瓶颈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Linux%20TC%EF%BC%88Traffic%20Control%EF%BC%89%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux TC（Traffic Control）命令详解
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Wireshark%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wireshark安装使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%BA%91%E5%8E%9F%E7%94%9F%E8%BF%90%E7%BB%B4%E5%AE%9E%E6%88%98%EF%BD%9CPrometheus%2BGrafana%20%E5%85%A8%E5%A5%97%E7%9B%91%E6%8E%A7%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    云原生运维实战｜Prometheus+Grafana 全套监控指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%BC%81%E4%B8%9A%E8%BF%90%E7%BB%B4%E5%AE%9E%E6%88%98%EF%BD%9CZabbix%20%E5%85%A8%E5%A5%97%E7%9B%91%E6%8E%A7%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    企业运维实战｜Zabbix 全套监控指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4%E5%AE%9E%E6%88%98%EF%BD%9CIperf3%20%E5%85%A8%E7%BD%91%E8%B6%85%E8%AF%A6%E7%BB%86%E6%B5%8B%E9%80%9F%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络运维实战｜Iperf3 全网超详细测速指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4%E5%AE%9E%E6%88%98%EF%BD%9CNmap%20%E8%B6%85%E5%85%A8%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络运维实战｜Nmap 超全实战指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4%E5%AE%9E%E6%88%98%EF%BD%9CSmokeping%20%E9%95%BF%E6%95%88%E9%93%BE%E8%B7%AF%E7%9B%91%E6%8E%A7%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络运维实战｜Smokeping 长效链路监控指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4%E5%AE%9E%E6%88%98%EF%BD%9CTCPDump%20%E8%B6%85%E5%85%A8%E6%8A%93%E5%8C%85%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络运维实战｜TCPDump 超全抓包指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络运维零基础指南｜6大系统自带命令行工具故障排障实战教程
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络运维零基础指南｜6大系统自带命令行工具故障排障实战教程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一、Ping 网络连通性检测工具
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一、Ping 网络连通性检测工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 核心工作原理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-windowslinux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Windows/Linux 系统差异与常用参数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 核心故障排查场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 禁Ping场景与报错解析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 生产最佳实践
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tracert-traceroute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二、Tracert / Traceroute 路由追踪工具
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、Tracert / Traceroute 路由追踪工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 核心工作原理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 系统命令差异
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 高频故障场景排查
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 生产实操规范
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#telnet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三、Telnet 端口连通性测试工具
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三、Telnet 端口连通性测试工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 工具部署与基础操作
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 核心使用场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 安全风险与替代方案
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netstat-ss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四、Netstat / SS 端口与连接状态查看工具
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="四、Netstat / SS 端口与连接状态查看工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 工具作用与常用参数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 核心故障排查：TCP异常状态
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 生产实操场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        五、ARP 地址解析排查工具
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="五、ARP 地址解析排查工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 核心工作原理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 基础操作命令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 内网高频故障排查
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 生产最佳实践
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns-nslookup-dig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        六、DNS 域名解析排查工具（nslookup / dig）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="六、DNS 域名解析排查工具（nslookup / dig）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 工具核心作用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-nslookup-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. nslookup 详细使用教程（Windows 主力）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-dig-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. dig 详细使用教程（Linux 主力）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 高频 DNS 故障场景排查
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 生产最佳实践
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%BF%90%E7%BB%B4%E5%BF%85%E5%A4%87%E7%A5%9E%E5%99%A8%EF%BD%9CFinalShell%20%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AE%8C%E6%95%B4%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    运维必备神器｜FinalShell 零基础完整实战指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络技术
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    网络技术
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/Cisco%E5%AE%98%E7%BD%91%E5%86%85%E5%AE%B9%E5%BF%AB%E9%80%9F%E5%AF%BC%E8%88%AA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cisco官网内容快速导航
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/%E5%85%89%E7%BA%A4%E4%B8%8E%E5%85%89%E6%A8%A1%E5%9D%97%E7%BB%88%E6%9E%81%E5%8C%B9%E9%85%8D%E6%8C%87%E5%8D%97%EF%BC%9A%E5%88%AB%E5%86%8D%E5%87%AD%E2%80%9C%E5%8D%83%E5%85%86%E7%BB%8F%E9%AA%8C%E2%80%9D%E4%B9%B1%E6%B7%B7%E7%94%A8%E4%BA%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    光纤与光模块终极匹配指南：别再凭“千兆经验”乱混用了
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/%E5%8D%8E%E4%B8%BA%E5%AE%98%E7%BD%91%E5%86%85%E5%AE%B9%E5%BF%AB%E9%80%9F%E5%AF%BC%E8%88%AA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    华为官网内容快速导航
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%20VXLAN%20%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E6%88%98%EF%BC%88%E5%8D%8E%E4%B8%BA%20%2B%20Cisco%20%E5%8F%8C%E5%8E%82%E5%95%86%E9%85%8D%E7%BD%AE%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    深入浅出 VXLAN 技术原理与实战（华为 + Cisco 双厂商配置）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/%E8%BF%9B%E9%98%B6%E5%90%83%E9%80%8FEVPN%2BVXLAN%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E7%94%9F%E4%BA%A7%E6%A0%B8%E5%BF%83%E6%9E%B6%E6%9E%84%EF%BC%88%E5%8D%8E%E4%B8%BA%2BCisco%E5%AE%9E%E6%88%98%E9%85%8D%E7%BD%AE%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    进阶吃透EVPN+VXLAN：数据中心生产核心架构（华为+Cisco实战配置）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络运维
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    网络运维
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4/%E5%BD%BB%E5%BA%95%E6%90%9E%E6%87%82%E7%B3%BB%E7%BB%9F%E5%8F%AF%E9%9D%A0%E6%80%A7%E4%B8%8E%E5%8F%AF%E7%94%A8%E6%80%A7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    彻底搞懂系统可靠性与可用性：核心区别、计算公式与落地架构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87%E5%B7%A1%E6%A3%80%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8%EF%BC%88Cisco%20%2B%20%E5%8D%8E%E4%B8%BA%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络设备巡检命令大全（Cisco + 华为）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4/%E8%BF%90%E7%BB%B4%E5%BF%85%E5%A4%87%EF%BC%81Linux%20%E9%AB%98%E9%A2%91%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8%EF%BC%88%E5%AE%9E%E6%88%98%E5%A4%87%E6%9F%A5%E7%89%88%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    运维必备！Linux 高频常用命令大全（实战备查版）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4/%E8%BF%90%E7%BB%B4%E7%BD%91%E7%BB%9C%E6%8E%92%E9%94%99%E5%BF%85%E5%A4%87%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8%EF%BC%9A%E4%BB%8E%E8%BF%9E%E9%80%9A%E6%80%A7%E5%88%B0%E6%8A%93%E5%8C%85%E5%85%A8%E6%B5%81%E7%A8%8B%E6%8E%92%E6%9F%A5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    运维网络排错必备命令大全：从连通性到抓包全流程排查
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        一、Ping 网络连通性检测工具
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="一、Ping 网络连通性检测工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 核心工作原理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-windowslinux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Windows/Linux 系统差异与常用参数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 核心故障排查场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 禁Ping场景与报错解析
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 生产最佳实践
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tracert-traceroute" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        二、Tracert / Traceroute 路由追踪工具
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="二、Tracert / Traceroute 路由追踪工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 核心工作原理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 系统命令差异
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 高频故障场景排查
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 生产实操规范
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#telnet" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        三、Telnet 端口连通性测试工具
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="三、Telnet 端口连通性测试工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 工具部署与基础操作
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 核心使用场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 安全风险与替代方案
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#netstat-ss" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        四、Netstat / SS 端口与连接状态查看工具
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="四、Netstat / SS 端口与连接状态查看工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 工具作用与常用参数
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-tcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 核心故障排查：TCP异常状态
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 生产实操场景
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#arp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        五、ARP 地址解析排查工具
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="五、ARP 地址解析排查工具">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 核心工作原理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. 基础操作命令
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. 内网高频故障排查
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 生产最佳实践
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dns-nslookup-dig" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        六、DNS 域名解析排查工具（nslookup / dig）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="六、DNS 域名解析排查工具（nslookup / dig）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. 工具核心作用
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-nslookup-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. nslookup 详细使用教程（Windows 主力）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-dig-linux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. dig 详细使用教程（Linux 主力）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-dns" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. 高频 DNS 故障场景排查
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. 生产最佳实践
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="6">网络运维零基础指南｜6大系统自带命令行工具故障排障实战教程</h1>
+<p>在网络运维、服务器故障排查、日常网络调试工作中，系统自带命令行工具是所有运维工程师的<strong>排障基石</strong>。这类工具无需安装、零成本、全平台通用，覆盖90%以上的基础网络故障场景，是新手入门、资深运维日常排查的必备技能。</p>
+<p>很多运维人员工作多年，只会简单输入基础命令，看不懂报错、不会精准定位故障、不了解生产环境使用规范。本文整合 <strong>Ping、Tracert/Traceroute、Telnet、Netstat/SS、ARP</strong><strong>、Nslookup/Dig</strong> 六大核心运维命令，从核心原理、跨系统参数差异、常用实操指令、高频故障排查、报错深度解析、生产最佳实践全方位讲解，是一套可直接落地、零基础适配的系统命令网络排障实战合集。</p>
+<h2 id="ping">一、Ping 网络连通性检测工具</h2>
+<p><strong>工具定位</strong>：全网最基础、最高频的网络连通性检测工具，用于判断链路通断、延迟、丢包问题</p>
+<h3 id="1">1. 核心工作原理</h3>
+<p>Ping 基于 <strong>ICMP 互联网控制报文协议</strong> 工作，通过发送「回显请求数据包」、接收「回显应答数据包」，统计链路往返时间、丢包率，以此判断网络连通性与网络质量。完整流程为：本地发送ICMP请求→目标主机接收并应答→本地统计网络数据，完成一次检测。</p>
+<p>核心作用：验证本地网络协议栈、检测链路通畅性、排查延迟抖动与丢包、精准划分本地/内网/公网故障区间。</p>
+<h3 id="2-windowslinux">2. Windows/Linux 系统差异与常用参数</h3>
+<p>两大系统默认行为存在明显区别：Windows 默认发送4次数据包后自动终止，适合快速排查；Linux 默认无限持续发包，需 Ctrl+C 手动终止，适合长期监测链路稳定性。</p>
+<p><strong>Windows 核心参数</strong>：<code>ping IP</code>（基础连通性测试）、<code>ping -t IP</code>（持续ping，排查间歇性故障）、<code>ping -n 次数 IP</code>（指定发包次数）、<code>ping -l 字节 IP</code>（自定义数据包大小，测试MTU）、<code>ping -a IP</code>（反向解析主机名）。</p>
+<p><strong>Linux 核心参数</strong>：<code>ping IP</code>（持续检测）、<code>ping -c 次数 IP</code>（指定发包次数）、<code>ping -W 秒数 IP</code>（设置超时时间）、<code>ping -s 大小 IP</code>（自定义数据包载荷）、<code>ping -i 秒数 IP</code>（调整发包间隔）。</p>
+<h3 id="3">3. 核心故障排查场景</h3>
+<p><strong>请求超时</strong>：多为目标设备离线、防火墙/ACL拦截、链路中断、路由不可达，排查顺序：本地网关→设备在线状态→安全策略→链路节点。</p>
+<p><strong>网络丢包</strong>：由网线老化、交换机端口故障、内网广播风暴、带宽拥堵、运营商链路抖动导致，可通过持续ping观测丢包规律，逐段排查硬件与网络流量。</p>
+<p><strong>高延迟/波动大</strong>：内网正常延迟＜1ms，公网正常数十ms，延迟过高多为带宽占满、设备性能不足、跨运营商访问，可分段测试定位拥堵节点。</p>
+<h3 id="4-ping">4. 禁Ping场景与报错解析</h3>
+<p>生产环境中<strong>Ping不通≠业务不通</strong>，常见禁Ping场景：服务器防火墙拦截、设备ACL策略限制、运营商骨干节点屏蔽、云平台安全组默认拒绝ICMP协议。</p>
+<p>高频报错：目标主机不可达（网关/路由配置错误、ARP异常）、传输超时（路由环路）、常规故障（本地网卡/协议栈异常），可针对性排查网络配置与硬件状态。</p>
+<h3 id="5">5. 生产最佳实践</h3>
+<p>故障排查逐层测试（本地→内网网关→公网DNS），间歇性故障必须持续监测；日常巡检使用固定次数发包，避免占用带宽；严禁用超大包ping核心业务设备，杜绝网络拥堵；不单独以Ping结果判定业务状态，需结合端口检测综合判断。</p>
+<h2 id="tracert-traceroute">二、Tracert / Traceroute 路由追踪工具</h2>
+<p><strong>工具定位</strong>：链路断点、跨网段卡顿、公网/专线访问超时专属排查工具，精准定位故障路由节点</p>
+<h3 id="1_1">1. 核心工作原理</h3>
+<p>路由追踪工具通过<strong>逐跳探测路由节点</strong>工作，通过不断调整数据包TTL（生存时间），依次获取本地到目标IP经过的所有路由网关、交换机、骨干节点信息，记录每一跳的延迟与连通状态，最终梳理完整链路跳转路径。</p>
+<p>核心作用：解决跨网段访问慢、链路中断、公网卡顿、专线延迟异常，精准找到故障具体节点，避免盲目排查。</p>
+<h3 id="2">2. 系统命令差异</h3>
+<p>Windows 系统命令为 <code>tracert 目标IP/域名</code>，默认基于ICMP协议探测，操作简单、无需额外参数；Linux 系统命令为 <code>traceroute 目标IP/域名</code>，默认基于UDP协议，部分系统需手动安装，探测精度更高。</p>
+<h3 id="3_1">3. 高频故障场景排查</h3>
+<p><strong>追踪结果星号超时</strong>：最常见问题，成因多为中间路由节点防火墙拦截探测数据包、运营商节点隐藏路由信息、节点拥堵超时。单节点超时不影响业务，连续多跳超时则说明链路中断。</p>
+<p><strong>跨网段/公网卡顿</strong>：通过逐跳延迟数据，若某一跳延迟突然飙升，即可判定该运营商节点或内网网关为拥堵故障点，针对性联系运维或运营商处理。</p>
+<p><strong>专线链路故障</strong>：企业专线访问卡顿、丢包时，通过路由追踪可区分是内网设备故障、专线运营商中段故障还是对端设备故障。</p>
+<h3 id="4">4. 生产实操规范</h3>
+<p>网络访问异常优先路由追踪，锁定故障区间；排查公网问题时，可结合本地、服务器两端追踪，对比链路差异；区分节点策略拦截与真实链路故障，避免误判网络问题。</p>
+<h2 id="telnet">三、Telnet 端口连通性测试工具</h2>
+<p><strong>工具定位</strong>：快速检测服务器、网络设备端口通断，验证端口服务可用性，端口排查刚需工具</p>
+<h3 id="1_2">1. 工具部署与基础操作</h3>
+<p>Telnet为系统原生工具，Windows需在「启用或关闭Windows功能」中开启Telnet客户端，Linux可通过 yum/apt 快速安装。核心命令：<code>telnet IP 端口号</code>，用于检测指定端口是否开放、服务是否正常监听。连接成功后显示空白窗口，连接失败提示连接超时或无法访问，按下 <code>Ctrl+]</code> 输入 <code>quit</code> 即可退出会话。</p>
+<h3 id="2_1">2. 核心使用场景</h3>
+<p>日常运维中，Ping仅能检测链路连通性，<strong>Telnet是验证业务可用性的核心工具</strong>。常用于排查：服务器端口不通、网站服务无法访问、数据库/端口服务异常、防火墙端口放行校验等场景。当Ping不通但Telnet端口通，说明链路正常、仅ICMP被拦截；Telnet不通则说明端口未开放或被策略封禁。</p>
+<h3 id="3_2">3. 安全风险与替代方案</h3>
+<p>Telnet最大缺陷为<strong>明文传输数据</strong>，无加密机制，传输账号、密码、数据极易被抓包窃取，存在严重安全隐患。目前企业生产环境已禁止使用Telnet远程登录，仅保留临时端口检测用途。</p>
+<p>安全替代工具：SSH、NC（Netcat），支持加密传输，兼顾端口检测与远程运维安全，是现阶段主流替代方案。</p>
+<h2 id="netstat-ss">四、Netstat / SS 端口与连接状态查看工具</h2>
+<p><strong>工具定位</strong>：排查端口占用、TCP异常连接、恶意访问、服务启动失败的核心命令</p>
+<h3 id="1_3">1. 工具作用与常用参数</h3>
+<p>Netstat 是跨平台端口连接查看工具，可查看系统所有TCP/UDP连接、监听端口、进程占用、连接状态，是排查端口冲突、服务异常的基础工具。SS 是Linux系统新一代替代工具，速度更快、信息更全面、资源占用更低。</p>
+<p><strong>Netstat 常用参数</strong>：<code>netstat -ano</code>（Windows查看所有连接、端口、进程PID）、<code>netstat -lntp</code>（Linux查看监听端口与进程）。</p>
+<p><strong>SS 常用参数</strong>：<code>ss -lntp</code>（查看监听端口）、<code>ss -s</code>（统计所有连接状态），适配高并发服务器场景。</p>
+<h3 id="2-tcp">2. 核心故障排查：TCP异常状态</h3>
+<p><strong>TIME_WAIT 状态过多</strong>：连接关闭后未及时释放，导致端口资源占用、新连接无法建立，多为短连接业务频繁创建销毁连接导致，可通过调整系统内核参数优化。</p>
+<p><strong>CLOSE_WAIT 状态过多</strong>：对端已关闭连接，本地未主动释放，导致连接堆积、内存占用过高，多为程序BUG、服务卡死导致，需重启服务、优化程序连接释放逻辑。</p>
+<h3 id="3_3">3. 生产实操场景</h3>
+<p>排查服务启动失败（端口被占用）、检测服务器异常外联恶意连接、统计业务连接数、优化服务器TCP性能，日常运维优先使用SS命令替代老旧Netstat，提升排查效率。</p>
+<h2 id="arp">五、ARP 地址解析排查工具</h2>
+<p><strong>工具定位</strong>：专治内网IP冲突、设备频繁掉线、网络卡顿、ARP欺骗，内网运维核心工具</p>
+<h3 id="1_4">1. 核心工作原理</h3>
+<p>ARP（地址解析协议）核心作用是<strong>实现IP地址与MAC地址的映射解析</strong>。内网通信时，设备通过ARP协议获取目标IP对应的物理MAC地址，生成ARP缓存表，保障局域网数据正常转发。若ARP缓存异常、映射错误，会直接导致内网通信故障。</p>
+<h3 id="2_2">2. 基础操作命令</h3>
+<p><strong>Windows</strong>：<code>arp -a</code>（查看本机ARP缓存表）、<code>arp -d</code>（清空异常ARP缓存）；</p>
+<p><strong>Linux</strong>：<code>arp -n</code>（查看ARP映射）、可手动配置静态ARP绑定，防止地址篡改。</p>
+<h3 id="3_4">3. 内网高频故障排查</h3>
+<p><strong>IP地址冲突</strong>：局域网两台设备使用同一IP，导致设备频繁掉线、网络时通时断，通过arp -a查看重复IP对应的MAC地址，定位异常设备即可解决。</p>
+<p><strong>ARP欺骗攻击</strong>：恶意设备伪造网关ARP信息，劫持内网所有流量，导致全网卡顿、断网、数据泄露。排查方式：对比网关真实MAC与ARP缓存MAC，不一致则判定为ARP欺骗，需立即清理缓存、绑定静态ARP、排查恶意设备。</p>
+<h3 id="4_1">4. 生产最佳实践</h3>
+<p>企业核心网关、服务器建议配置<strong>静态ARP绑定</strong>，杜绝ARP篡改；内网定期巡检ARP缓存表，排查异常映射；出现全网卡顿、批量掉线问题，优先排查ARP冲突与欺骗问题。</p>
+<h2 id="dns-nslookup-dig">六、DNS 域名解析排查工具（nslookup / dig）</h2>
+<p><strong>工具定位</strong>：专治域名无法访问、解析报错、DNS污染、解析延迟、内外网解析不一致，是网站、业务域名故障必备排查命令</p>
+<h3 id="1_5">1. 工具核心作用</h3>
+<p>网络通、端口通但网站打不开、业务访问异常，90% 是 <strong>DNS 域名解析故障</strong>。nslookup、dig 是系统原生 DNS 排查工具，用于检测域名解析是否生效、解析IP是否正确、DNS服务器是否正常响应、是否存在解析污染与缓存异常，是运维排查域名故障的核心刚需命令。</p>
+<p>工具区别：Windows 默认自带 <strong>nslookup</strong>；Linux 优先使用 <strong>dig</strong>（精度更高、信息更全），部分系统需手动安装。</p>
+<h3 id="2-nslookup-windows">2. nslookup 详细使用教程（Windows 主力）</h3>
+<p><strong>基础解析查询</strong>：<code>nslookup 域名</code>，默认查询A记录，获取域名对应的公网IP。</p>
+<p><strong>指定DNS服务器解析</strong>：<code>nslookup 域名 DNS服务器IP</code>，可测试本地DNS、公共DNS（223.5.5.5、8.8.8.8）解析差异，排查局部DNS故障。</p>
+<p><strong>交互式详细查询</strong>：输入 <code>nslookup</code> 进入交互模式，可手动设置查询类型、超时时间，适合深度排障。</p>
+<p><strong>常见解析类型查询</strong>：</p>
+<p>A记录（IPv4）：<code>set type=A</code></p>
+<p>AAAA记录（IPv6）：<code>set type=AAAA</code></p>
+<p>CNAME别名记录：<code>set type=CNAME</code></p>
+<p>MX邮件记录：<code>set type=MX</code></p>
+<p>NS域名服务器记录：<code>set type=NS</code></p>
+<h3 id="3-dig-linux">3. dig 详细使用教程（Linux 主力）</h3>
+<p>dig 相比 nslookup 返回信息更完整、解析过程更透明，支持查看解析耗时、服务器响应、TTL缓存、权威服务器信息，是生产环境Linux服务器DNS排查首选。</p>
+<p><strong>基础解析命令</strong>：<code>dig 域名</code>，完整输出解析全过程与结果。</p>
+<p><strong>简洁结果输出</strong>：<code>dig 域名 +short</code>，仅返回解析IP，适合脚本巡检、快速核对。</p>
+<p><strong>指定DNS解析</strong>：<code>dig @DNS服务器IP 域名</code>，对比不同DNS解析结果，排查解析污染问题。</p>
+<p><strong>查询指定记录类型</strong>：<code>dig 域名 A/AAAA/MX/CNAME</code></p>
+<p><strong>追踪完整解析链路</strong>：<code>dig 域名 +trace</code>，从根服务器、顶级服务器、权威服务器逐层追踪，精准定位解析卡顿、失效节点。</p>
+<h3 id="4-dns">4. 高频 DNS 故障场景排查</h3>
+<p><strong>场景一：域名解析超时/无法解析</strong>：本地DNS服务器故障、DNS缓存异常、域名过期、解析记录未生效。可切换公共DNS重试，清理本地DNS缓存（Windows：ipconfig /flushdns）。</p>
+<p><strong>场景二：解析IP错误、网站跳转异常</strong>：存在本地DNS缓存污染、运营商DNS劫持、 hosts 强制映射冲突。通过对比本地DNS与公共DNS解析结果即可定位问题。</p>
+<p><strong>场景三：内外网解析不一致</strong>：内网私有DNS解析内网IP，公网DNS解析外网IP，业务访问错乱，可通过指定不同DNS解析区分环境。</p>
+<p><strong>场景四：域名刚修改记录不生效</strong>：受TTL缓存机制影响，本地、运营商、CDN节点缓存未刷新，可通过dig查看TTL剩余时间，耐心等待或手动清缓存。</p>
+<h3 id="5_1">5. 生产最佳实践</h3>
+<p>1. 业务域名故障优先使用「多DNS对比解析」，快速判断是域名配置问题还是本地DNS问题；</p>
+<p>2. 域名变更、CDN切换后，使用 dig +trace 校验全网解析链路是否正常；</p>
+<p>3. 服务器禁止依赖本地缓存DNS，关键业务配置公共DNS兜底；</p>
+<p>4. 网站、业务访问异常标准排查顺序：Ping链路连通性 → DNS域名解析校验 → Telnet端口连通测试 → 业务服务状态核查。</p>
+<p>系统自带六大命令是网络运维的<strong>底层核心能力</strong>，各司其职、相辅相成，可覆盖绝大多数基础网络故障：</p>
+<p>1. <strong>Ping</strong>：快速判定整体链路通断与网络质量；</p>
+<p>2. <strong>Tracert/Traceroute</strong>：定位跨网段、公网链路故障节点；</p>
+<p>3. <strong>Telnet</strong>：验证端口与业务服务可用性；</p>
+<p>4. <strong>Netstat/SS</strong>：排查端口占用、TCP连接异常；</p>
+<p>5. <strong>ARP</strong>：解决内网IP冲突、设备掉线、ARP欺骗等局域网故障；</p>
+<p>6. <strong>DNS<span class="arithmatex">\(nslookup/dig\)</span></strong>：排查域名解析错误、解析超时、DNS劫持、内外网解析异常等域名类故障。</p>
+<p><strong>运维标准排查核心逻辑</strong>：先Ping检测基础链路连通性与网络质量 → DNS校验域名解析是否正常 → Telnet验证端口与业务服务可用性 → Tracert/Traceroute定位跨网段/公网故障节点 → ARP排查内网局域网异常 → Netstat/SS分析端口与TCP连接异常，逐层缩窄故障范围、精准定位问题，高效解决99%的日常网络与业务访问故障。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/yanzhg" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "navigation.top", "content.code.copy", "content.code.annotate", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax-config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

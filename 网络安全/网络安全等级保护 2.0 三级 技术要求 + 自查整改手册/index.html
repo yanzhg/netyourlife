@@ -1,0 +1,3101 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://yanzhg.github.io/netyourlife/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%AD%89%E7%BA%A7%E4%BF%9D%E6%8A%A4%202.0%20%E4%B8%89%E7%BA%A7%20%E6%8A%80%E6%9C%AF%E8%A6%81%E6%B1%82%20%2B%20%E8%87%AA%E6%9F%A5%E6%95%B4%E6%94%B9%E6%89%8B%E5%86%8C/">
+      
+      
+        <link rel="prev" href="../%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%9B%B8%E5%85%B3%E7%9A%84%E6%B3%95%E5%BE%8B%E6%B3%95%E8%A7%84/">
+      
+      
+        <link rel="next" href="../%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87%E4%B8%8E%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE%E5%9F%BA%E7%BA%BF%E6%A0%B8%E6%9F%A5%E8%A7%84%E8%8C%83/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>网络安全等级保护 2.0 三级 技术要求 + 自查整改手册 - 老闫玩儿技术</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#20" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="老闫玩儿技术" class="md-header__button md-logo" aria-label="老闫玩儿技术" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            老闫玩儿技术
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              网络安全等级保护 2.0 三级 技术要求 + 自查整改手册
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="切换至深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="切换至浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="老闫玩儿技术" class="md-nav__button md-logo" aria-label="老闫玩儿技术" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    老闫玩儿技术
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    老闫玩儿网络
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    智能运维
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    智能运维
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%99%BA%E8%83%BD%E8%BF%90%E7%BB%B4/%E4%BC%A0%E7%BB%9F%E4%BA%BA%E5%B7%A5%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4%20VS%20AI%E6%99%BA%E8%83%BD%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4%EF%BC%9A%E8%BF%90%E7%BB%B4%E6%A8%A1%E5%BC%8F%E5%8F%98%E9%9D%A9%E4%B8%8E%E8%90%BD%E5%9C%B0%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    传统人工网络运维 VS AI智能网络运维：运维模式变革与落地实践指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络安全
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    网络安全
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iptables%E4%B8%8Eufw%E5%AF%B9%E6%AF%94/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    iptables 与 ufw 对比 + 常用封禁 IP、网段放行端口策略
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%B8%AD%E5%B0%8F%E4%BC%81%E4%B8%9A%E9%9B%B6%E6%88%90%E6%9C%AC%E5%BC%80%E6%BA%90%E5%AE%89%E5%85%A8%E9%97%AD%E7%8E%AF%EF%BD%9C%E5%85%A8%E5%A5%97%E5%8F%AF%E8%90%BD%E5%9C%B0%E5%AE%9E%E6%93%8D%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中小企业零成本开源安全闭环｜全套可落地实操部署方案
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%94%9F%E4%BA%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A0%87%E5%87%86%E9%98%B2%E7%81%AB%E5%A2%99%E8%A7%84%E5%88%99%E6%A8%A1%E6%9D%BF%EF%BC%88iptables%20%2B%20ufw%20%E4%B8%A4%E5%A5%97%E5%8F%AF%E7%9B%B4%E6%8E%A5%E5%A4%8D%E5%88%B6%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    生产服务器标准防火墙规则模板（iptables + ufw 两套可直接复制）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AD%89%E4%BF%9D%E6%B5%8B%E8%AF%84%E4%B8%AD%E5%A4%87%E4%BB%BD%E7%9B%AE%E5%BD%95%E7%9A%84%E5%AE%89%E5%85%A8%E6%95%B4%E6%94%B9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    等保测评中备份目录的安全整改
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%9B%B8%E5%85%B3%E7%9A%84%E6%B3%95%E5%BE%8B%E6%B3%95%E8%A7%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络安全相关的法律法规
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络安全等级保护 2.0 三级 技术要求 + 自查整改手册
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络安全等级保护 2.0 三级 技术要求 + 自查整改手册
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一部分 安全物理环境
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一部分 安全物理环境">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 物理位置选择
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 物理访问控制
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 防盗窃、防破坏
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 防雷、防静电
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 防火、防水、温湿度控制
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 电力供应
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二部分 安全通信网络
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第二部分 安全通信网络">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 网络架构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 网络传输
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-ac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 网络设备安全（交换机 / 路由器 / AC 等）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 流量监控与异常分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三部分 安全区域边界（防火墙、WAF、堡垒机、边界设备）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第三部分 安全区域边界（防火墙、WAF、堡垒机、边界设备）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 边界访问控制（防火墙）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-ipsids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 边界入侵防范（IPS/IDS）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-web-waf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Web 应用防护（WAF）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 安全审计与运维管控（堡垒机）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 恶意代码防范（边界防病毒）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-dlp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 数据泄露防护（边界 DLP）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四部分 安全计算环境（服务器、终端、数据库、应用系统）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第四部分 安全计算环境（服务器、终端、数据库、应用系统）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 身份鉴别（主机 / 服务器 / 数据库 / 应用）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 身份鉴别（主机 / 服务器 / 数据库 / 应用）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        整改操作
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="整改操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows 服务器
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linuxcentos-uos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linux（CentOS / 麒麟 / UOS）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysqloraclesql-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据库（MySQL/Oracle/SQL Server）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        业务应用系统
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 访问控制（主机 / 目录 / 文件）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 恶意代码防范（主机杀毒）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 入侵防范与系统加固
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 安全审计（主机 / 数据库 / 应用日志）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 数据完整性、保密性、备份恢复
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7 剩余信息保护
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#48-pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.8 终端安全（办公 PC、桌面终端）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第五部分 安全管理中心
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第五部分 安全管理中心">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 集中安全审计平台（日志审计）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 集中运维与资产管理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 漏洞扫描与风险管理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 安全监控与应急响应
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87%E4%B8%8E%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE%E5%9F%BA%E7%BA%BF%E6%A0%B8%E6%9F%A5%E8%A7%84%E8%8C%83/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络设备与服务器安全配置基线核查规范
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87%E9%85%8D%E7%BD%AE%20%E5%9B%BD%E5%AF%86%E5%8A%A0%E5%AF%86%E5%A4%87%E4%BB%BD%20%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC%EF%BC%88%E5%8F%AF%E7%9B%B4%E6%8E%A5%E4%B8%8A%E7%BA%BF%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络设备配置 国密加密备份 一键脚本（可直接上线）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%BE%E5%A4%87%E9%85%8D%E7%BD%AE%E5%A4%87%E4%BB%BD%E7%9B%AE%E5%BD%95%E5%AE%89%E5%85%A8%E6%95%B4%E6%94%B9%E6%8A%A5%E5%91%8A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    等保测评设备配置备份目录安全整改报告
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%9B%B6%E6%88%90%E6%9C%AC%E8%90%BD%E5%9C%B0%EF%BC%81%E4%B8%AD%E5%B0%8F%E4%BC%81%E4%B8%9A%E5%BC%80%E6%BA%90%E5%85%A8%E8%87%AA%E5%8A%A8%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4%E9%97%AD%E7%8E%AF%2B%E8%87%AA%E5%BB%BAIP%E4%BF%A1%E8%AA%89%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    零成本落地！中小企业开源全自动网络安全防护闭环+自建IP信誉系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络工具
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    网络工具
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/Linux%20TC%20%E7%BD%91%E7%BB%9C%E6%8E%92%E9%94%99%E5%AE%9E%E6%88%98%EF%BC%9A%E6%90%9E%E5%AE%9A%E5%BB%B6%E8%BF%9F%E3%80%81%E6%8A%96%E5%8A%A8%E3%80%81%E4%B8%A2%E5%8C%85%E3%80%81%E5%B8%A6%E5%AE%BD%E7%93%B6%E9%A2%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux TC 网络排错实战：搞定延迟、抖动、丢包、带宽瓶颈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/Linux%20TC%EF%BC%88Traffic%20Control%EF%BC%89%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux TC（Traffic Control）命令详解
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/Wireshark%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wireshark安装使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/%E4%BA%91%E5%8E%9F%E7%94%9F%E8%BF%90%E7%BB%B4%E5%AE%9E%E6%88%98%EF%BD%9CPrometheus%2BGrafana%20%E5%85%A8%E5%A5%97%E7%9B%91%E6%8E%A7%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    云原生运维实战｜Prometheus+Grafana 全套监控指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/%E4%BC%81%E4%B8%9A%E8%BF%90%E7%BB%B4%E5%AE%9E%E6%88%98%EF%BD%9CZabbix%20%E5%85%A8%E5%A5%97%E7%9B%91%E6%8E%A7%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    企业运维实战｜Zabbix 全套监控指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4%E5%AE%9E%E6%88%98%EF%BD%9CIperf3%20%E5%85%A8%E7%BD%91%E8%B6%85%E8%AF%A6%E7%BB%86%E6%B5%8B%E9%80%9F%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络运维实战｜Iperf3 全网超详细测速指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4%E5%AE%9E%E6%88%98%EF%BD%9CNmap%20%E8%B6%85%E5%85%A8%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络运维实战｜Nmap 超全实战指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4%E5%AE%9E%E6%88%98%EF%BD%9CSmokeping%20%E9%95%BF%E6%95%88%E9%93%BE%E8%B7%AF%E7%9B%91%E6%8E%A7%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络运维实战｜Smokeping 长效链路监控指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4%E5%AE%9E%E6%88%98%EF%BD%9CTCPDump%20%E8%B6%85%E5%85%A8%E6%8A%93%E5%8C%85%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络运维实战｜TCPDump 超全抓包指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4%E9%9B%B6%E5%9F%BA%E7%A1%80%E6%8C%87%E5%8D%97%EF%BD%9C6%E5%A4%A7%E7%B3%BB%E7%BB%9F%E8%87%AA%E5%B8%A6%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7%E6%8E%92%E9%9A%9C%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络运维零基础指南｜6大系统自带命令行工具故障排障实战教程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/%E8%BF%90%E7%BB%B4%E5%BF%85%E5%A4%87%E7%A5%9E%E5%99%A8%EF%BD%9CFinalShell%20%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AE%8C%E6%95%B4%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    运维必备神器｜FinalShell 零基础完整实战指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络技术
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    网络技术
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/Cisco%E5%AE%98%E7%BD%91%E5%86%85%E5%AE%B9%E5%BF%AB%E9%80%9F%E5%AF%BC%E8%88%AA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cisco官网内容快速导航
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/%E5%85%89%E7%BA%A4%E4%B8%8E%E5%85%89%E6%A8%A1%E5%9D%97%E7%BB%88%E6%9E%81%E5%8C%B9%E9%85%8D%E6%8C%87%E5%8D%97%EF%BC%9A%E5%88%AB%E5%86%8D%E5%87%AD%E2%80%9C%E5%8D%83%E5%85%86%E7%BB%8F%E9%AA%8C%E2%80%9D%E4%B9%B1%E6%B7%B7%E7%94%A8%E4%BA%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    光纤与光模块终极匹配指南：别再凭“千兆经验”乱混用了
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/%E5%8D%8E%E4%B8%BA%E5%AE%98%E7%BD%91%E5%86%85%E5%AE%B9%E5%BF%AB%E9%80%9F%E5%AF%BC%E8%88%AA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    华为官网内容快速导航
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%20VXLAN%20%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E6%88%98%EF%BC%88%E5%8D%8E%E4%B8%BA%20%2B%20Cisco%20%E5%8F%8C%E5%8E%82%E5%95%86%E9%85%8D%E7%BD%AE%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    深入浅出 VXLAN 技术原理与实战（华为 + Cisco 双厂商配置）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/%E8%BF%9B%E9%98%B6%E5%90%83%E9%80%8FEVPN%2BVXLAN%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E7%94%9F%E4%BA%A7%E6%A0%B8%E5%BF%83%E6%9E%B6%E6%9E%84%EF%BC%88%E5%8D%8E%E4%B8%BA%2BCisco%E5%AE%9E%E6%88%98%E9%85%8D%E7%BD%AE%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    进阶吃透EVPN+VXLAN：数据中心生产核心架构（华为+Cisco实战配置）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络运维
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    网络运维
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4/%E5%BD%BB%E5%BA%95%E6%90%9E%E6%87%82%E7%B3%BB%E7%BB%9F%E5%8F%AF%E9%9D%A0%E6%80%A7%E4%B8%8E%E5%8F%AF%E7%94%A8%E6%80%A7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    彻底搞懂系统可靠性与可用性：核心区别、计算公式与落地架构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87%E5%B7%A1%E6%A3%80%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8%EF%BC%88Cisco%20%2B%20%E5%8D%8E%E4%B8%BA%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络设备巡检命令大全（Cisco + 华为）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4/%E8%BF%90%E7%BB%B4%E5%BF%85%E5%A4%87%EF%BC%81Linux%20%E9%AB%98%E9%A2%91%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8%EF%BC%88%E5%AE%9E%E6%88%98%E5%A4%87%E6%9F%A5%E7%89%88%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    运维必备！Linux 高频常用命令大全（实战备查版）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4/%E8%BF%90%E7%BB%B4%E7%BD%91%E7%BB%9C%E6%8E%92%E9%94%99%E5%BF%85%E5%A4%87%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8%EF%BC%9A%E4%BB%8E%E8%BF%9E%E9%80%9A%E6%80%A7%E5%88%B0%E6%8A%93%E5%8C%85%E5%85%A8%E6%B5%81%E7%A8%8B%E6%8E%92%E6%9F%A5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    运维网络排错必备命令大全：从连通性到抓包全流程排查
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第一部分 安全物理环境
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第一部分 安全物理环境">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 物理位置选择
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 物理访问控制
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 防盗窃、防破坏
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 防雷、防静电
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.5 防火、防水、温湿度控制
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.6 电力供应
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第二部分 安全通信网络
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第二部分 安全通信网络">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 网络架构
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 网络传输
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23-ac" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 网络设备安全（交换机 / 路由器 / AC 等）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 流量监控与异常分析
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#waf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第三部分 安全区域边界（防火墙、WAF、堡垒机、边界设备）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第三部分 安全区域边界（防火墙、WAF、堡垒机、边界设备）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 边界访问控制（防火墙）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-ipsids" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 边界入侵防范（IPS/IDS）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-web-waf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 Web 应用防护（WAF）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 安全审计与运维管控（堡垒机）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.5 恶意代码防范（边界防病毒）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#36-dlp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.6 数据泄露防护（边界 DLP）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第四部分 安全计算环境（服务器、终端、数据库、应用系统）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第四部分 安全计算环境（服务器、终端、数据库、应用系统）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 身份鉴别（主机 / 服务器 / 数据库 / 应用）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 身份鉴别（主机 / 服务器 / 数据库 / 应用）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        整改操作
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="整改操作">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Windows 服务器
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linuxcentos-uos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linux（CentOS / 麒麟 / UOS）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mysqloraclesql-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        数据库（MySQL/Oracle/SQL Server）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        业务应用系统
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 访问控制（主机 / 目录 / 文件）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#43" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.3 恶意代码防范（主机杀毒）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#44" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.4 入侵防范与系统加固
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#45" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.5 安全审计（主机 / 数据库 / 应用日志）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#46" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.6 数据完整性、保密性、备份恢复
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#47" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.7 剩余信息保护
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#48-pc" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.8 终端安全（办公 PC、桌面终端）
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        第五部分 安全管理中心
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="第五部分 安全管理中心">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 集中安全审计平台（日志审计）
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 集中运维与资产管理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 漏洞扫描与风险管理
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#54" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.4 安全监控与应急响应
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="20">网络安全等级保护 2.0 三级 技术要求 + 自查整改手册</h1>
+<p><strong>依据标准</strong>：GB/T 22239-2019《信息安全技术 网络安全等级保护基本要求》</p>
+<p><strong>适用对象</strong>：等保三级信息系统 / 网络、主机、应用、数据、终端、安全管理设备</p>
+<p><strong>使用说明</strong>：本手册按<strong>安全物理环境、安全通信网络、安全区域边界、安全计算环境、安全管理中心</strong>五大技术域拆分，每项包含【标准要求】【自查要点】【整改操作 / 配置指南】，可直接逐项落地自查、整改、验收。</p>
+<hr />
+<h2 id="_1">第一部分 安全物理环境</h2>
+<h3 id="11">1.1 物理位置选择</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>机房场地应选择在具有防震、防风、防雨、防火、防地质灾害的区域；</li>
+<li>机房应远离易燃易爆、强电磁干扰、强污染源区域；</li>
+<li>三级系统机房不得设置在建筑顶层、地下室底层、用水设备正下方。</li>
+</ol>
+<p><strong>自查要点</strong></p>
+<ul>
+<li>核查机房选址、周边环境、楼层位置</li>
+<li>查看机房上方 / 周边是否有水管、消防喷淋直淋区域、配电室、危化品仓库</li>
+</ul>
+<p><strong>整改操作</strong></p>
+<ol>
+<li>若机房在顶层 / 地下底层：<strong>搬迁至建筑标准楼层</strong>，避开上下水管道、消防主管道正下方；</li>
+<li>周边存在强电磁 / 危化品：增设金属屏蔽隔断、隔离护栏，保持安全距离；</li>
+<li>留存选址说明、现场照片、周边环境平面图存档。</li>
+</ol>
+<h3 id="12">1.2 物理访问控制</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>机房出入口配置门禁系统，实现身份鉴别、出入记录留存；</li>
+<li>区分机房区域权限，不同区域人员权限隔离；</li>
+<li>外来人员进入机房需审批、登记、专人陪同，全程记录；</li>
+<li>门禁日志留存不少于 6 个月。</li>
+</ol>
+<p><strong>自查要点</strong></p>
+<ul>
+<li>有无门禁、刷卡 / 人脸 / 密码认证、出入台账、访客登记本</li>
+<li>日志导出、留存周期核查</li>
+</ul>
+<p><strong>整改操作</strong></p>
+<ol>
+<li>无门禁：部署<strong>人脸 / 刷卡门禁</strong>，开启日志审计功能；</li>
+<li>权限划分：按运维、管理、访客配置不同门禁权限，禁止通用密码；</li>
+<li>访客管理：制作《机房访客登记表》，执行 “申请 - 登记 - 陪同 - 离场” 流程；</li>
+<li>日志配置：门禁系统设置日志自动备份，<strong>留存≥180 天</strong>，定期导出归档。</li>
+</ol>
+<h3 id="13">1.3 防盗窃、防破坏</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>机房部署视频监控，覆盖出入口、机柜区、设备区；</li>
+<li>监控录像留存不少于 6 个月；</li>
+<li>机房门窗加固，配置防盗锁，重要机柜加装机柜锁；</li>
+<li>设置专人巡检制度。</li>
+</ol>
+<p><strong>自查要点</strong></p>
+<ul>
+<li>监控覆盖范围、录像存储周期、门窗 / 机柜防护、巡检记录</li>
+</ul>
+<p><strong>整改操作</strong></p>
+<ol>
+<li>补全监控点位，确保无盲区；NVR 配置存储策略，录像保存 <strong>≥180 天 </strong>；</li>
+<li>机房门窗更换防盗门窗，所有服务器机柜加装机械锁 / 电子锁；</li>
+<li>制定《机房日常巡检表》，每日巡检并签字留存。</li>
+</ol>
+<h3 id="14">1.4 防雷、防静电</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>机房配备专业防雷接地、等电位接地系统；</li>
+<li>机柜、设备、金属桥架统一接地；</li>
+<li>机房铺设防静电地板，运维人员配备防静电手环 / 服；</li>
+<li>强电、弱电线路分离布设。</li>
+</ol>
+<p><strong>自查要点</strong></p>
+<ul>
+<li>接地电阻检测报告、防静电设施、强弱电布线情况</li>
+</ul>
+<p><strong>整改操作</strong></p>
+<ol>
+<li>联系电工 / 弱电厂商检测接地电阻，不合格立即整改；</li>
+<li>全覆盖防静电地板，运维工位标配防静电手环；</li>
+<li>重新梳理布线，强电电缆与网线 / 光纤<strong>分槽 / 分桥架</strong>铺设，间距达标。</li>
+</ol>
+<h3 id="15">1.5 防火、防水、温湿度控制</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>机房配备气体灭火 / 消防器材，禁止使用喷淋灭火；</li>
+<li>部署漏水检测装置，重点监测机柜下方、管道周边；</li>
+<li>部署精密空调，温湿度实时监控（温度 18-26℃，湿度 40%-70%）；</li>
+<li>配备烟感、温感报警装置，报警联动提醒。</li>
+</ol>
+<p><strong>自查要点</strong></p>
+<ul>
+<li>消防类型、漏水检测、空调运行、温湿度记录、报警功能</li>
+</ul>
+<p><strong>整改操作</strong></p>
+<ol>
+<li>拆除机房内消防喷淋，更换为七氟丙烷等气体灭火设备；</li>
+<li>在机房低洼处、水管下方加装漏水绳 / 漏水报警器，联动声光告警；</li>
+<li>空调 7×24 运行，部署温湿度监测终端，自动记录数据，每日核查。</li>
+</ol>
+<h3 id="16">1.6 电力供应</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>核心设备配备 UPS 不间断电源，续航满足业务最长停机处置时间；</li>
+<li>重要机房配置备用发电机组；</li>
+<li>市电、UPS、配电回路分级管理，回路标识清晰；</li>
+<li>定期对 UPS、电池进行充放电检测、维保。</li>
+</ol>
+<p><strong>自查要点</strong></p>
+<ul>
+<li>UPS 配置、续航时长、备用电源、配电标识、维保记录</li>
+</ul>
+<p><strong>整改操作</strong></p>
+<ol>
+<li>测算业务停机处置时长，扩容 UPS 电池组，保证断电后<strong>续航达标</strong>；</li>
+<li>三级核心机房增设柴油发电机，制定市电中断切换预案；</li>
+<li>所有配电盘、回路张贴标签，区分主路、UPS 路、普通负载；</li>
+<li>每季度执行 UPS 充放电测试，留存维保报告。</li>
+</ol>
+<hr />
+<h2 id="_2">第二部分 安全通信网络</h2>
+<h3 id="21">2.1 网络架构</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>网络进行分层分区设计：互联网区、边界区、核心区、业务区、管理区、运维区，区域逻辑隔离；</li>
+<li>重要业务系统独立网段，禁止不同安全等级系统混网；</li>
+<li>网络设备（交换机、路由器）冗余部署，关键链路冗余，防止单点故障；</li>
+<li>划分广播域，通过 VLAN 隔离不同业务终端 / 服务器。</li>
+</ol>
+<p><strong>自查要点</strong></p>
+<ul>
+<li>网络拓扑、分区情况、VLAN 划分、设备 / 链路冗余、混网情况</li>
+</ul>
+<p><strong>整改操作</strong></p>
+<ol>
+<li>重新规划网段与 VLAN：按业务、安全域划分独立 VLAN，不同区域不互通；</li>
+<li>核心交换机、出口路由器<strong>双机热备 / 堆叠</strong>，关键链路做链路聚合；</li>
+<li>绘制正式《网络拓扑图》，标注区域、VLAN、IP 段、设备型号，归档留存；</li>
+<li>低安全等级终端（办公 PC）禁止直连业务服务器网段。</li>
+</ol>
+<h3 id="22">2.2 网络传输</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>远程运维、管理数据、业务敏感数据传输采用加密方式（SSL/TLS、IPSec）；</li>
+<li>禁止明文传输 Telnet、FTP、HTTP 等协议；</li>
+<li>跨区域、跨互联网通信使用加密隧道。</li>
+</ol>
+<p><strong>自查要点</strong></p>
+<ul>
+<li>协议使用情况、远程管理方式、外网传输是否加密</li>
+</ul>
+<p><strong>整改操作</strong></p>
+<ol>
+<li>全网<strong>禁用 Telnet、FTP</strong>，替换为 SSH、SFTP；</li>
+<li>Web 业务全站部署 HTTPS（TLS1.2 及以上），关闭 HTTP 明文端口；</li>
+<li>跨互联网互联站点部署 IPSec VPN/SSL VPN 加密隧道；</li>
+<li>网络设备管理地址仅开放 SSH，关闭 WEB 明文管理。</li>
+</ol>
+<h3 id="23-ac">2.3 网络设备安全（交换机 / 路由器 / AC 等）</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>设备进行身份鉴别，启用强口令、多因素认证；</li>
+<li>关闭不必要端口、不必要服务、闲置接口；</li>
+<li>开启设备日志、审计功能，日志集中上传；</li>
+<li>定期升级固件 / 系统补丁，修复高危漏洞；</li>
+<li>配置权限分级，最小权限原则，禁止共用管理员账号。</li>
+</ol>
+<p><strong>自查要点</strong></p>
+<ul>
+<li>口令复杂度、闲置端口 / 服务、日志开启、补丁版本、账号权限</li>
+</ul>
+<p><strong>整改操作（通用配置，华为 / Cisco 均适用）</strong></p>
+<ol>
+<li>账号口令整改</li>
+<li>设置口令长度≥10 位，包含大小写、数字、特殊字符，90 天定期更换；</li>
+<li>新建运维、只读、管理员不同权限账号，删除默认账号、弱口令账号。</li>
+<li>关闭冗余服务 / 端口</li>
+<li>关闭设备 CDP、LLDP（按需）、HTTP、FTP、闲置 Console 口、空闲物理接口；</li>
+<li>禁用未使用的 SNMP v1/v2c（明文版本），仅保留 SNMP v3。</li>
+<li>日志配置</li>
+<li>开启设备操作日志、告警日志、流量日志，<strong>同步至日志服务器</strong>；</li>
+<li>漏洞加固</li>
+<li>查询厂商漏洞公告，在线下刷升级设备固件，修复高危 CVE 漏洞；</li>
+<li>安全策略</li>
+<li>配置 ACL，仅允许指定运维 IP 访问设备管理地址。</li>
+</ol>
+<h3 id="24">2.4 流量监控与异常分析</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>部署流量分析、异常检测设备，监测网络流量、攻击行为；</li>
+<li>对 DDoS、端口扫描、暴力破解、异常外联进行告警；</li>
+<li>流量日志、异常告警日志留存≥6 个月。</li>
+</ol>
+<p><strong>自查要点</strong></p>
+<ul>
+<li>有无流量监测、攻击告警、日志留存</li>
+</ul>
+<p><strong>整改操作</strong></p>
+<ol>
+<li>旁路部署流量分析平台、入侵检测系统（IDS）；</li>
+<li>配置告警规则：DDoS、扫描、暴力破解、异常外连 IP 实时告警；</li>
+<li>配置日志本地 + 远端双备份，存储周期≥180 天。</li>
+</ol>
+<hr />
+<h2 id="waf">第三部分 安全区域边界（防火墙、WAF、堡垒机、边界设备）</h2>
+<h3 id="31">3.1 边界访问控制（防火墙）</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>全网边界部署防火墙，基于<strong>最小权限</strong>配置访问策略；</li>
+<li>策略按 “拒绝所有，按需放行” 原则，禁止全通策略；</li>
+<li>定期清理冗余、失效防火墙策略；</li>
+<li>区分内外网、不同安全域边界，逐级防护。</li>
+</ol>
+<p><strong>自查要点</strong></p>
+<ul>
+<li>防火墙策略、全通规则、冗余策略、域间隔离</li>
+</ul>
+<p><strong>整改操作</strong></p>
+<ol>
+<li>梳理所有业务通信需求，逐条优化策略，<strong>删除 any-any 全通规则</strong>；</li>
+<li>策略源 / 目的限定 IP 段、端口、协议，精准放行；</li>
+<li>每月开展策略审计，删除长期未命中、过期策略；</li>
+<li>多级边界：互联网→防火墙→DMZ 区→内网业务区，分层隔离。</li>
+</ol>
+<h3 id="32-ipsids">3.2 边界入侵防范（IPS/IDS）</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>边界部署入侵防御系统（IPS），阻断 SQL 注入、XSS、木马、漏洞利用攻击；</li>
+<li>攻击特征库定期自动升级；</li>
+<li>阻断行为、攻击日志完整记录并留存。</li>
+</ol>
+<p><strong>自查要点</strong></p>
+<ul>
+<li>IPS 部署、特征库版本、攻击拦截效果、日志留存</li>
+</ul>
+<p><strong>整改操作</strong></p>
+<ol>
+<li>防火墙旁挂 / 串联 IPS，开启攻击防御规则；</li>
+<li>配置特征库<strong>每日自动更新</strong>；</li>
+<li>开启攻击拦截日志，同步至日志平台，留存≥180 天。</li>
+</ol>
+<h3 id="33-web-waf">3.3 Web 应用防护（WAF）</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>对外 Web 业务前端部署 WAF，防护 Web 通用攻击；</li>
+<li>防护规则覆盖 SQL 注入、XSS、文件上传、命令执行、越权访问；</li>
+<li>配置 CC 攻击防护、爬虫防护、URL 访问控制。</li>
+</ol>
+<p><strong>自查要点</strong></p>
+<ul>
+<li>WAF 部署、防护规则、CC 防护、日志记录</li>
+</ul>
+<p><strong>整改操作</strong></p>
+<ol>
+<li>所有公网 Web 站点前置 WAF，开启基础防护规则集；</li>
+<li>针对业务场景自定义规则，拦截非法上传、恶意请求；</li>
+<li>开启 CC 限流、人机验证，抵御恶意爬虫与 CC 攻击；</li>
+<li>WAF 日志统一汇总归档。</li>
+</ol>
+<h3 id="34">3.4 安全审计与运维管控（堡垒机）</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>所有设备、服务器、数据库运维操作<strong>统一经过堡垒机</strong>；</li>
+<li>实现账号统一管理、单点登录、权限管控、操作录像 / 命令审计；</li>
+<li>禁止运维人员直连内网核心设备 / 服务器；</li>
+<li>运维审计记录（录像、命令、日志）留存≥6 个月。</li>
+</ol>
+<p><strong>自查要点</strong></p>
+<ul>
+<li>堡垒机覆盖范围、直连情况、审计录像、留存周期</li>
+</ul>
+<p><strong>整改操作</strong></p>
+<ol>
+<li>全网运维入口收敛至堡垒机，服务器、网络设备、数据库全部纳入管控；</li>
+<li>防火墙策略限制：仅堡垒机 IP 可访问所有设备管理端口，<strong>禁止终端直连</strong>；</li>
+<li>开启命令审计、屏幕录像，设置存储周期≥180 天；</li>
+<li>运维账号统一由堡垒机分配，落实一人一号。</li>
+</ol>
+<h3 id="35">3.5 恶意代码防范（边界防病毒）</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>互联网入口、文件传输边界部署网关防病毒；</li>
+<li>对上传、下载、邮件、文件传输进行病毒、木马查杀；</li>
+<li>病毒库定期自动更新。</li>
+</ol>
+<p><strong>自查要点</strong></p>
+<ul>
+<li>网关杀毒、病毒库更新、文件查杀策略</li>
+</ul>
+<p><strong>整改操作</strong></p>
+<ol>
+<li>防火墙 / 网关开启防病毒、木马、恶意文件检测功能；</li>
+<li>配置病毒库自动升级，每日更新；</li>
+<li>禁止传输可执行文件、恶意脚本等高危文件。</li>
+</ol>
+<h3 id="36-dlp">3.6 数据泄露防护（边界 DLP）</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>边界部署数据防泄漏能力，识别并阻断敏感数据外发；</li>
+<li>对身份证、手机号、合同、核心业务数据等敏感内容检测告警。</li>
+</ol>
+<p><strong>自查要点</strong></p>
+<ul>
+<li>敏感数据外发检测、阻断规则</li>
+</ul>
+<p><strong>整改操作</strong></p>
+<ol>
+<li>在网关 / 邮件系统配置 DLP 规则，定义敏感数据特征；</li>
+<li>针对外网邮件、网盘、网页上传等通道做敏感内容拦截 + 告警。</li>
+</ol>
+<hr />
+<h2 id="_3">第四部分 安全计算环境（服务器、终端、数据库、应用系统）</h2>
+<h3 id="41">4.1 身份鉴别（主机 / 服务器 / 数据库 / 应用）</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>所有操作系统、数据库、业务应用启用<strong>强口令策略</strong>；</li>
+<li>关键服务器、运维账号启用双因素认证（令牌、人脸、短信）；</li>
+<li>账号实名制，一人一号，删除匿名账号、测试账号、过期账号；</li>
+<li>登录失败处理：多次失败锁定账号，设置锁定时长。</li>
+</ol>
+<p><strong>自查要点</strong></p>
+<ul>
+<li>口令复杂度、空口令 / 弱口令、匿名账号、登录锁定、双因子</li>
+</ul>
+<h4 id="_4">整改操作</h4>
+<h5 id="windows">Windows 服务器</h5>
+<ol>
+<li>本地安全策略 → 账户策略 → 密码策略：</li>
+<li>密码长度最小值：10 位</li>
+<li>密码必须符合复杂性要求：启用</li>
+<li>密码最长使用期限：90 天</li>
+<li>强制密码历史：5 个</li>
+<li>账户锁定策略：登录失败<strong>5 次锁定</strong>，锁定时长≥30 分钟；</li>
+<li>禁用 Guest 账号、多余测试账号，重命名默认管理员账号；</li>
+<li>关键主机部署动态令牌 / 短信二 factor 认证。</li>
+</ol>
+<h5 id="linuxcentos-uos">Linux（CentOS / 麒麟 / UOS）</h5>
+<ol>
+<li>编辑 <code>/etc/pam.d/system-auth</code> 配置口令复杂度；</li>
+<li>配置 <code>/etc/pam.d/sshd</code> 开启登录失败锁定；</li>
+<li>清理无效账号，禁止 root 远程直接登录；</li>
+<li>重要服务器部署二因素认证。</li>
+</ol>
+<h5 id="mysqloraclesql-server">数据库（MySQL/Oracle/SQL Server）</h5>
+<ol>
+<li>删除默认账号、匿名账号，修改 sa/root 弱口令；</li>
+<li>开启数据库登录审计、失败锁定；</li>
+<li>数据库访问仅放行内网指定 IP，禁止公网直连。</li>
+</ol>
+<h5 id="_5">业务应用系统</h5>
+<ol>
+<li>应用后台开启强口令、验证码、登录锁定；</li>
+<li>重要后台管理页启用短信 / 验证码二次校验。</li>
+</ol>
+<h3 id="42">4.2 访问控制（主机 / 目录 / 文件）</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>操作系统、文件目录、共享文件夹设置最小访问权限；</li>
+<li>关闭不必要系统共享、远程桌面、远程访问服务；</li>
+<li>区分管理员、普通用户权限，普通用户禁止提权；</li>
+<li>数据库表、视图按角色分配权限，最小授权。</li>
+</ol>
+<p><strong>自查要点</strong></p>
+<ul>
+<li>共享开启情况、权限配置、远程服务、数据库权限</li>
+</ul>
+<p><strong>整改操作</strong></p>
+<ol>
+<li>Windows：关闭所有不必要文件共享、IPC$ 共享，限制远程桌面登录 IP；</li>
+<li>Linux：严格配置目录权限（750/700 为主），禁止全局可写目录；</li>
+<li>数据库：回收普通用户 DBA、高权限角色，按业务划分数据库账号权限；</li>
+<li>禁止服务器开启全员可访问的匿名共享。</li>
+</ol>
+<h3 id="43">4.3 恶意代码防范（主机杀毒）</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>所有服务器、办公终端部署终端防病毒软件；</li>
+<li>病毒库、引擎自动升级，定期全盘查杀；</li>
+<li>禁止终端私自安装软件、运行未知程序。</li>
+</ol>
+<p><strong>自查要点</strong></p>
+<ul>
+<li>杀毒软件覆盖率、病毒库状态、查杀记录</li>
+</ul>
+<p><strong>整改操作</strong></p>
+<ol>
+<li>全网终端、服务器统一部署企业版杀毒软件，做到<strong>全覆盖</strong>；</li>
+<li>配置病毒库自动更新，每周定时全盘查杀；</li>
+<li>终端开启软件管控，禁止私自安装陌生程序、外挂、破解软件。</li>
+</ol>
+<h3 id="44">4.4 入侵防范与系统加固</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>及时修复操作系统、中间件、第三方软件高危漏洞（补丁）；</li>
+<li>关闭系统不必要服务、端口、组件；</li>
+<li>开启主机防火墙、主机入侵检测；</li>
+<li>禁止使用存在高危漏洞的老旧版本系统 / 中间件。</li>
+</ol>
+<p><strong>自查要点</strong></p>
+<ul>
+<li>补丁安装、开放端口、运行服务、系统版本</li>
+</ul>
+<p><strong>整改操作</strong></p>
+<ol>
+<li>建立补丁管理流程：每月漏洞扫描，高危漏洞<strong>7 日内完成补丁修复</strong>；</li>
+<li>Windows：关闭多余服务、禁用不必要启动项，启用系统防火墙，仅放行业务端口；</li>
+<li>Linux：禁用无用服务（telnet、rlogin、nfs 等），使用<code>firewalld/iptables</code>做主机端口限制；</li>
+<li>升级老旧中间件（Tomcat、JBoss、Nginx 等）至安全版本，删除默认页面、示例程序。</li>
+</ol>
+<h3 id="45">4.5 安全审计（主机 / 数据库 / 应用日志）</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>操作系统开启登录、注销、权限变更、文件操作审计；</li>
+<li>数据库开启登录、增删改查、账号操作审计；</li>
+<li>应用系统开启用户操作、后台管理、业务操作日志；</li>
+<li>所有主机日志统一汇总至日志平台，留存≥6 个月。</li>
+</ol>
+<p><strong>自查要点</strong></p>
+<ul>
+<li>审计功能开启、日志收集、存储周期</li>
+</ul>
+<p><strong>整改操作</strong></p>
+<ol>
+<li>Windows 开启安全策略审计，记录登录、权限、文件访问；</li>
+<li>Linux 启用 rsyslog，系统日志远端上传至日志服务器；</li>
+<li>数据库开启审计功能，记录所有高危操作；</li>
+<li>应用补全操作日志，统一对接日志平台。</li>
+</ol>
+<h3 id="46">4.6 数据完整性、保密性、备份恢复</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>重要业务数据、配置文件定期备份，本地 + 异地双备份；</li>
+<li>备份周期：核心数据每日增量、每周全量；</li>
+<li>备份文件加密存储，禁止明文存放敏感备份；</li>
+<li>定期开展备份恢复演练，验证备份可用性；</li>
+<li>传输、存储敏感数据进行加密，禁止明文存储身份证、手机号等。</li>
+</ol>
+<p><strong>自查要点</strong></p>
+<ul>
+<li>备份策略、异地备份、加密、恢复演练、数据加密</li>
+</ul>
+<p><strong>整改操作</strong></p>
+<ol>
+<li>制定备份计划：全量 + 增量结合，核心数据<strong>每日备份</strong>；</li>
+<li>实现本地 + 异地（离线介质 / 异地服务器）双备份；</li>
+<li>备份包启用加密压缩，设置访问密码；</li>
+<li>每季度做一次恢复演练，留存演练报告；</li>
+<li>数据库内敏感字段（证件、手机号）采用加密存储。</li>
+</ol>
+<h3 id="47">4.7 剩余信息保护</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>服务器、终端、存储设备删除数据后，彻底清除残留信息；</li>
+<li>废旧硬盘、U 盘、设备报废前做数据销毁；</li>
+<li>禁止直接丢弃存储介质。</li>
+</ol>
+<p><strong>整改操作</strong></p>
+<ol>
+<li>设备报废前使用专业工具全盘擦除数据；</li>
+<li>涉密存储介质统一回收、物理销毁；</li>
+<li>文档删除后清空回收站，重要文件使用粉碎删除。</li>
+</ol>
+<h3 id="48-pc">4.8 终端安全（办公 PC、桌面终端）</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>终端统一桌面管控、外设管控（USB 端口）；</li>
+<li>禁用非法 USB、蓝牙、无线热点；</li>
+<li>终端统一基线加固，口令、补丁、杀毒合规；</li>
+<li>禁止终端私自接入外网、私搭路由。</li>
+</ol>
+<p><strong>整改操作</strong></p>
+<ol>
+<li>部署终端安全管理平台，管控 USB 设备（仅允许授权 U 盘）；</li>
+<li>关闭终端蓝牙、热点、无线网卡（内网终端）；</li>
+<li>统一终端安全基线，批量推送补丁、安全策略。</li>
+</ol>
+<hr />
+<h2 id="_6">第五部分 安全管理中心</h2>
+<h3 id="51">5.1 集中安全审计平台（日志审计）</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>搭建统一日志审计平台，收集网络、边界、主机、应用、数据库全量日志；</li>
+<li>日志关联分析、异常告警；</li>
+<li>日志留存≥6 个月，不可篡改。</li>
+</ol>
+<p><strong>整改操作</strong></p>
+<ol>
+<li>全网设备、主机、应用配置日志远端推送至日志审计系统；</li>
+<li>配置关联告警规则：暴力破解、异常登录、越权操作、高危命令；</li>
+<li>开启日志防篡改，设置存储周期≥180 天。</li>
+</ol>
+<h3 id="52">5.2 集中运维与资产管理</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>建立 IT 资产台账：网络设备、服务器、终端、安全设备、软件；</li>
+<li>资产实名制、责任人、用途、IP、版本统一管理；</li>
+<li>定期资产盘点，禁用闲置僵尸资产。</li>
+</ol>
+<p><strong>整改操作</strong></p>
+<ol>
+<li>梳理全部资产，建立电子化资产台账；</li>
+<li>每季度资产盘点，下线长期闲置、无人使用的僵尸主机 / 设备。</li>
+</ol>
+<h3 id="53">5.3 漏洞扫描与风险管理</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>定期开展全网漏洞扫描（主机、网络、Web）；</li>
+<li>高危漏洞限时整改，形成漏洞闭环管理；</li>
+<li>定期渗透测试（三级系统要求年度渗透测试）。</li>
+</ol>
+<p><strong>整改操作</strong></p>
+<ol>
+<li>每月执行全网漏洞扫描，输出漏洞报告；</li>
+<li>高危漏洞 7 日内整改，中低风险限期整改，跟踪闭环；</li>
+<li>每年委托第三方开展等级保护渗透测试。</li>
+</ol>
+<h3 id="54">5.4 安全监控与应急响应</h3>
+<p><strong>标准要求</strong></p>
+<ol>
+<li>统一安全监控大屏，集中展示告警、故障、攻击事件；</li>
+<li>制定网络安全应急预案、应急处置流程；</li>
+<li>定期开展应急演练。</li>
+</ol>
+<p><strong>整改操作</strong></p>
+<ol>
+<li>对接各类安全设备告警，实现统一监控；</li>
+<li>编制《网络安全应急预案》，明确人员、流程、处置步骤；</li>
+<li>每年至少开展 2 次应急演练（攻击、宕机、数据泄露场景）。</li>
+</ol>
+<hr />
+<h1 id="_7">附：等保三级自查整改使用清单（可直接打印使用）</h1>
+<p>表格</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">安全域</th>
+<th style="text-align: center;">检查项</th>
+<th style="text-align: center;">合规状态（是 / 否）</th>
+<th style="text-align: center;">问题描述</th>
+<th style="text-align: center;">整改措施</th>
+<th style="text-align: center;">完成时间</th>
+<th style="text-align: center;">责任人</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">安全物理环境</td>
+<td style="text-align: center;">机房选址、门禁、监控、消防、电力</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">安全通信网络</td>
+<td style="text-align: center;">网络架构、VLAN、冗余、协议加密</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">安全区域边界</td>
+<td style="text-align: center;">防火墙策略、IPS、WAF、堡垒机</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">安全计算环境</td>
+<td style="text-align: center;">主机加固、口令、补丁、杀毒、备份</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+<tr>
+<td style="text-align: center;">安全管理中心</td>
+<td style="text-align: center;">日志审计、漏洞扫描、资产、应急</td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+<td style="text-align: center;"></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h1 id="_8">补充说明</h1>
+<ol>
+<li><strong>日志留存统一要求</strong>：等保三级所有安全日志、操作日志、审计日志<strong>最低留存 180 天</strong>；</li>
+<li><strong>补丁要求</strong>：高危漏洞 7 日内修复，中危 15 日内，低风险统一月度整改；</li>
+<li><strong>文档配套</strong>：本手册配套需同步整理：网络拓扑、资产台账、应急预案、演练记录、维保报告、访客登记、巡检记录等纸质 / 电子文档；</li>
+<li><strong>落地建议</strong>：按 “物理→网络→边界→主机→应用→管理中心” 顺序逐项整改，整改完成后先内部自查，再对接测评机构开展等保测评。</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/yanzhg" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "navigation.top", "content.code.copy", "content.code.annotate", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax-config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>

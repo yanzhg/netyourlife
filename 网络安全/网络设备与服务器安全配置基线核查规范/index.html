@@ -1,0 +1,2684 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://yanzhg.github.io/netyourlife/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87%E4%B8%8E%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%AE%89%E5%85%A8%E9%85%8D%E7%BD%AE%E5%9F%BA%E7%BA%BF%E6%A0%B8%E6%9F%A5%E8%A7%84%E8%8C%83/">
+      
+      
+        <link rel="prev" href="../%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%AD%89%E7%BA%A7%E4%BF%9D%E6%8A%A4%202.0%20%E4%B8%89%E7%BA%A7%20%E6%8A%80%E6%9C%AF%E8%A6%81%E6%B1%82%20%2B%20%E8%87%AA%E6%9F%A5%E6%95%B4%E6%94%B9%E6%89%8B%E5%86%8C/">
+      
+      
+        <link rel="next" href="../%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87%E9%85%8D%E7%BD%AE%20%E5%9B%BD%E5%AF%86%E5%8A%A0%E5%AF%86%E5%A4%87%E4%BB%BD%20%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC%EF%BC%88%E5%8F%AF%E7%9B%B4%E6%8E%A5%E4%B8%8A%E7%BA%BF%EF%BC%89/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>网络设备与服务器安全配置基线核查规范 - 老闫玩儿技术</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/style.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="老闫玩儿技术" class="md-header__button md-logo" aria-label="老闫玩儿技术" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            老闫玩儿技术
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              网络设备与服务器安全配置基线核查规范
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="切换至深色模式"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="切换至深色模式" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3zm3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95zm-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="blue"  aria-label="切换至浅色模式"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="切换至浅色模式" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5s-1.65.15-2.39.42zM3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29zm.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14zM20.65 7l-1.77 3.79a7.02 7.02 0 0 0-2.38-4.15zm-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29zM12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="老闫玩儿技术" class="md-nav__button md-logo" aria-label="老闫玩儿技术" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    老闫玩儿技术
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    老闫玩儿网络
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    智能运维
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    智能运维
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E6%99%BA%E8%83%BD%E8%BF%90%E7%BB%B4/%E4%BC%A0%E7%BB%9F%E4%BA%BA%E5%B7%A5%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4%20VS%20AI%E6%99%BA%E8%83%BD%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4%EF%BC%9A%E8%BF%90%E7%BB%B4%E6%A8%A1%E5%BC%8F%E5%8F%98%E9%9D%A9%E4%B8%8E%E8%90%BD%E5%9C%B0%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    传统人工网络运维 VS AI智能网络运维：运维模式变革与落地实践指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络安全
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    网络安全
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iptables%E4%B8%8Eufw%E5%AF%B9%E6%AF%94/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    iptables 与 ufw 对比 + 常用封禁 IP、网段放行端口策略
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E4%B8%AD%E5%B0%8F%E4%BC%81%E4%B8%9A%E9%9B%B6%E6%88%90%E6%9C%AC%E5%BC%80%E6%BA%90%E5%AE%89%E5%85%A8%E9%97%AD%E7%8E%AF%EF%BD%9C%E5%85%A8%E5%A5%97%E5%8F%AF%E8%90%BD%E5%9C%B0%E5%AE%9E%E6%93%8D%E9%83%A8%E7%BD%B2%E6%96%B9%E6%A1%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    中小企业零成本开源安全闭环｜全套可落地实操部署方案
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%94%9F%E4%BA%A7%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%A0%87%E5%87%86%E9%98%B2%E7%81%AB%E5%A2%99%E8%A7%84%E5%88%99%E6%A8%A1%E6%9D%BF%EF%BC%88iptables%20%2B%20ufw%20%E4%B8%A4%E5%A5%97%E5%8F%AF%E7%9B%B4%E6%8E%A5%E5%A4%8D%E5%88%B6%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    生产服务器标准防火墙规则模板（iptables + ufw 两套可直接复制）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%AD%89%E4%BF%9D%E6%B5%8B%E8%AF%84%E4%B8%AD%E5%A4%87%E4%BB%BD%E7%9B%AE%E5%BD%95%E7%9A%84%E5%AE%89%E5%85%A8%E6%95%B4%E6%94%B9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    等保测评中备份目录的安全整改
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%9B%B8%E5%85%B3%E7%9A%84%E6%B3%95%E5%BE%8B%E6%B3%95%E8%A7%84/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络安全相关的法律法规
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E7%AD%89%E7%BA%A7%E4%BF%9D%E6%8A%A4%202.0%20%E4%B8%89%E7%BA%A7%20%E6%8A%80%E6%9C%AF%E8%A6%81%E6%B1%82%20%2B%20%E8%87%AA%E6%9F%A5%E6%95%B4%E6%94%B9%E6%89%8B%E5%86%8C/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络安全等级保护 2.0 三级 技术要求 + 自查整改手册
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络设备与服务器安全配置基线核查规范
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络设备与服务器安全配置基线核查规范
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 总则
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1 总则">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 编制目的
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 适用范围
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 核查原则
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 判定标准
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 通用安全基线（所有设备通用）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 通用安全基线（所有设备通用）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 账号口令安全
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 时间与日志审计
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 远程管理安全
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 备份与防护
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-waf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 网络设备专项基线（交换机/路由器/防火墙/WAF/堡垒机）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 网络设备专项基线（交换机/路由器/防火墙/WAF/堡垒机）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 交换机、路由器基线
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 交换机、路由器基线">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.1 服务与端口加固
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.2 安全策略加固
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.3 核查方式
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 防火墙基线
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-waf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 WAF基线
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 堡垒机基线
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-windowslinux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 服务器安全基线（Windows+Linux通用专项）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 服务器安全基线（Windows+Linux通用专项）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Windows服务器基线
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Windows服务器基线">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#411" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.1 账号安全
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.2 系统安全加固
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-linuxcentosubuntuuos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Linux服务器基线（CentOS/Ubuntu/麒麟/UOS）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 Linux服务器基线（CentOS/Ubuntu/麒麟/UOS）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.1 账号与认证
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.2 服务与端口加固
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#423" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.3 日志与权限安全
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 资产上线基线核查流程（强制落地流程）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5 资产上线基线核查流程（强制落地流程）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 上线前置要求
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 标准核查步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 红线管控规则
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6 基线核查结果与整改闭环机制
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6 基线核查结果与整改闭环机制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 风险分级
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 整改闭环要求
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7 基线核查记录表（可直接复制使用）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8 附则
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87%E9%85%8D%E7%BD%AE%20%E5%9B%BD%E5%AF%86%E5%8A%A0%E5%AF%86%E5%A4%87%E4%BB%BD%20%E4%B8%80%E9%94%AE%E8%84%9A%E6%9C%AC%EF%BC%88%E5%8F%AF%E7%9B%B4%E6%8E%A5%E4%B8%8A%E7%BA%BF%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络设备配置 国密加密备份 一键脚本（可直接上线）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E8%AE%BE%E5%A4%87%E9%85%8D%E7%BD%AE%E5%A4%87%E4%BB%BD%E7%9B%AE%E5%BD%95%E5%AE%89%E5%85%A8%E6%95%B4%E6%94%B9%E6%8A%A5%E5%91%8A/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    等保测评设备配置备份目录安全整改报告
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../%E9%9B%B6%E6%88%90%E6%9C%AC%E8%90%BD%E5%9C%B0%EF%BC%81%E4%B8%AD%E5%B0%8F%E4%BC%81%E4%B8%9A%E5%BC%80%E6%BA%90%E5%85%A8%E8%87%AA%E5%8A%A8%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%98%B2%E6%8A%A4%E9%97%AD%E7%8E%AF%2B%E8%87%AA%E5%BB%BAIP%E4%BF%A1%E8%AA%89%E7%B3%BB%E7%BB%9F/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    零成本落地！中小企业开源全自动网络安全防护闭环+自建IP信誉系统
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络工具
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    网络工具
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/Linux%20TC%20%E7%BD%91%E7%BB%9C%E6%8E%92%E9%94%99%E5%AE%9E%E6%88%98%EF%BC%9A%E6%90%9E%E5%AE%9A%E5%BB%B6%E8%BF%9F%E3%80%81%E6%8A%96%E5%8A%A8%E3%80%81%E4%B8%A2%E5%8C%85%E3%80%81%E5%B8%A6%E5%AE%BD%E7%93%B6%E9%A2%88/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux TC 网络排错实战：搞定延迟、抖动、丢包、带宽瓶颈
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/Linux%20TC%EF%BC%88Traffic%20Control%EF%BC%89%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Linux TC（Traffic Control）命令详解
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/Wireshark%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Wireshark安装使用指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/%E4%BA%91%E5%8E%9F%E7%94%9F%E8%BF%90%E7%BB%B4%E5%AE%9E%E6%88%98%EF%BD%9CPrometheus%2BGrafana%20%E5%85%A8%E5%A5%97%E7%9B%91%E6%8E%A7%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    云原生运维实战｜Prometheus+Grafana 全套监控指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/%E4%BC%81%E4%B8%9A%E8%BF%90%E7%BB%B4%E5%AE%9E%E6%88%98%EF%BD%9CZabbix%20%E5%85%A8%E5%A5%97%E7%9B%91%E6%8E%A7%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    企业运维实战｜Zabbix 全套监控指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4%E5%AE%9E%E6%88%98%EF%BD%9CIperf3%20%E5%85%A8%E7%BD%91%E8%B6%85%E8%AF%A6%E7%BB%86%E6%B5%8B%E9%80%9F%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络运维实战｜Iperf3 全网超详细测速指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4%E5%AE%9E%E6%88%98%EF%BD%9CNmap%20%E8%B6%85%E5%85%A8%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络运维实战｜Nmap 超全实战指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4%E5%AE%9E%E6%88%98%EF%BD%9CSmokeping%20%E9%95%BF%E6%95%88%E9%93%BE%E8%B7%AF%E7%9B%91%E6%8E%A7%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络运维实战｜Smokeping 长效链路监控指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4%E5%AE%9E%E6%88%98%EF%BD%9CTCPDump%20%E8%B6%85%E5%85%A8%E6%8A%93%E5%8C%85%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络运维实战｜TCPDump 超全抓包指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4%E9%9B%B6%E5%9F%BA%E7%A1%80%E6%8C%87%E5%8D%97%EF%BD%9C6%E5%A4%A7%E7%B3%BB%E7%BB%9F%E8%87%AA%E5%B8%A6%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B7%A5%E5%85%B7%E6%8E%92%E9%9A%9C%E5%AE%9E%E6%88%98%E6%95%99%E7%A8%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络运维零基础指南｜6大系统自带命令行工具故障排障实战教程
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E5%B7%A5%E5%85%B7/%E8%BF%90%E7%BB%B4%E5%BF%85%E5%A4%87%E7%A5%9E%E5%99%A8%EF%BD%9CFinalShell%20%E9%9B%B6%E5%9F%BA%E7%A1%80%E5%AE%8C%E6%95%B4%E5%AE%9E%E6%88%98%E6%8C%87%E5%8D%97/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    运维必备神器｜FinalShell 零基础完整实战指南
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络技术
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    网络技术
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/Cisco%E5%AE%98%E7%BD%91%E5%86%85%E5%AE%B9%E5%BF%AB%E9%80%9F%E5%AF%BC%E8%88%AA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Cisco官网内容快速导航
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/%E5%85%89%E7%BA%A4%E4%B8%8E%E5%85%89%E6%A8%A1%E5%9D%97%E7%BB%88%E6%9E%81%E5%8C%B9%E9%85%8D%E6%8C%87%E5%8D%97%EF%BC%9A%E5%88%AB%E5%86%8D%E5%87%AD%E2%80%9C%E5%8D%83%E5%85%86%E7%BB%8F%E9%AA%8C%E2%80%9D%E4%B9%B1%E6%B7%B7%E7%94%A8%E4%BA%86/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    光纤与光模块终极匹配指南：别再凭“千兆经验”乱混用了
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/%E5%8D%8E%E4%B8%BA%E5%AE%98%E7%BD%91%E5%86%85%E5%AE%B9%E5%BF%AB%E9%80%9F%E5%AF%BC%E8%88%AA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    华为官网内容快速导航
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/%E6%B7%B1%E5%85%A5%E6%B5%85%E5%87%BA%20VXLAN%20%E6%8A%80%E6%9C%AF%E5%8E%9F%E7%90%86%E4%B8%8E%E5%AE%9E%E6%88%98%EF%BC%88%E5%8D%8E%E4%B8%BA%20%2B%20Cisco%20%E5%8F%8C%E5%8E%82%E5%95%86%E9%85%8D%E7%BD%AE%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    深入浅出 VXLAN 技术原理与实战（华为 + Cisco 双厂商配置）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF/%E8%BF%9B%E9%98%B6%E5%90%83%E9%80%8FEVPN%2BVXLAN%EF%BC%9A%E6%95%B0%E6%8D%AE%E4%B8%AD%E5%BF%83%E7%94%9F%E4%BA%A7%E6%A0%B8%E5%BF%83%E6%9E%B6%E6%9E%84%EF%BC%88%E5%8D%8E%E4%B8%BA%2BCisco%E5%AE%9E%E6%88%98%E9%85%8D%E7%BD%AE%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    进阶吃透EVPN+VXLAN：数据中心生产核心架构（华为+Cisco实战配置）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络运维
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    网络运维
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4/%E5%BD%BB%E5%BA%95%E6%90%9E%E6%87%82%E7%B3%BB%E7%BB%9F%E5%8F%AF%E9%9D%A0%E6%80%A7%E4%B8%8E%E5%8F%AF%E7%94%A8%E6%80%A7/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    彻底搞懂系统可靠性与可用性：核心区别、计算公式与落地架构
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4/%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87%E5%B7%A1%E6%A3%80%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8%EF%BC%88Cisco%20%2B%20%E5%8D%8E%E4%B8%BA%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    网络设备巡检命令大全（Cisco + 华为）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4/%E8%BF%90%E7%BB%B4%E5%BF%85%E5%A4%87%EF%BC%81Linux%20%E9%AB%98%E9%A2%91%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8%EF%BC%88%E5%AE%9E%E6%88%98%E5%A4%87%E6%9F%A5%E7%89%88%EF%BC%89/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    运维必备！Linux 高频常用命令大全（实战备查版）
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%E7%BD%91%E7%BB%9C%E8%BF%90%E7%BB%B4/%E8%BF%90%E7%BB%B4%E7%BD%91%E7%BB%9C%E6%8E%92%E9%94%99%E5%BF%85%E5%A4%87%E5%91%BD%E4%BB%A4%E5%A4%A7%E5%85%A8%EF%BC%9A%E4%BB%8E%E8%BF%9E%E9%80%9A%E6%80%A7%E5%88%B0%E6%8A%93%E5%8C%85%E5%85%A8%E6%B5%81%E7%A8%8B%E6%8E%92%E6%9F%A5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    运维网络排错必备命令大全：从连通性到抓包全流程排查
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1 总则
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="1 总则">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.1 编制目的
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.2 适用范围
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.3 核查原则
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1.4 判定标准
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2 通用安全基线（所有设备通用）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="2 通用安全基线（所有设备通用）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.1 账号口令安全
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.2 时间与日志审计
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.3 远程管理安全
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4 备份与防护
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-waf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3 网络设备专项基线（交换机/路由器/防火墙/WAF/堡垒机）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3 网络设备专项基线（交换机/路由器/防火墙/WAF/堡垒机）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1 交换机、路由器基线
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3.1 交换机、路由器基线">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#311" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.1 服务与端口加固
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#312" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.2 安全策略加固
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#313" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.1.3 核查方式
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.2 防火墙基线
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#33-waf" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.3 WAF基线
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3.4 堡垒机基线
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-windowslinux" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4 服务器安全基线（Windows+Linux通用专项）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4 服务器安全基线（Windows+Linux通用专项）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#41-windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1 Windows服务器基线
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.1 Windows服务器基线">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#411" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.1 账号安全
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#412" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.1.2 系统安全加固
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#42-linuxcentosubuntuuos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2 Linux服务器基线（CentOS/Ubuntu/麒麟/UOS）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="4.2 Linux服务器基线（CentOS/Ubuntu/麒麟/UOS）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#421" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.1 账号与认证
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#422" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.2 服务与端口加固
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#423" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4.2.3 日志与权限安全
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5 资产上线基线核查流程（强制落地流程）
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5 资产上线基线核查流程（强制落地流程）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.1 上线前置要求
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.2 标准核查步骤
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5.3 红线管控规则
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6 基线核查结果与整改闭环机制
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="6 基线核查结果与整改闭环机制">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#61" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.1 风险分级
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#62" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6.2 整改闭环要求
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7 基线核查记录表（可直接复制使用）
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8 附则
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="_1">网络设备与服务器安全配置基线核查规范</h1>
+<h2 id="1">1 总则</h2>
+<h3 id="11">1.1 编制目的</h3>
+<p>为统一企业网络设备、服务器安全配置标准，规范资产上线基线核查、日常合规巡检工作，落实最小权限、安全加固、审计留痕安全原则，规避弱口令、高危协议、违规配置、权限溢出等安全风险，满足《网络安全等级保护2.0》《电信网和互联网安全防护基线配置要求》合规要求，保障全网基础设施安全稳定运行，特制定本基线规范。</p>
+<h3 id="12">1.2 适用范围</h3>
+<p>本规范适用于企业所有入网及存量资产，包含：</p>
+<p>1）网络设备：路由器、交换机、防火墙、WAF、负载均衡、堡垒机、AC无线控制器；</p>
+<p>2）服务器设备：Windows Server 2016/2019/2022、CentOS、Ubuntu、麒麟、UOS等主流服务器操作系统；</p>
+<p>3）适用场景：新资产上线准入核查、季度基线巡检、整改复测、等保自查、安全整改验收。</p>
+<h3 id="13">1.3 核查原则</h3>
+<p>1）强制合规：高危配置项为一票否决项，不合规禁止上线、限期整改；</p>
+<p>2）最小配置：关闭所有非必要服务、端口、协议、账号权限；</p>
+<p>3）全程留痕：所有核查、加固、整改、复测记录归档留存，留存时长≥6个月；</p>
+<p>4）统一标准：所有设备遵循统一安全基线，差异化厂商仅适配操作命令，不降低安全标准。</p>
+<h3 id="14">1.4 判定标准</h3>
+<p>合规：完全满足基线配置要求，无高危、中风险配置漏洞；</p>
+<p>不合规：存在任一基线不达标项，区分高危、中危、低危，分级整改；</p>
+<p>豁免：特殊业务场景无法整改的，需提交书面豁免审批，限定风险范围及整改期限。</p>
+<h2 id="2">2 通用安全基线（所有设备通用）</h2>
+<h3 id="21">2.1 账号口令安全</h3>
+<p>1）禁止出厂默认账号密码，所有设备首次上线必须修改默认凭据；</p>
+<p>2）口令复杂度：长度≥8位，包含大小写字母、数字、特殊符号，禁止弱口令、简单序列口令；</p>
+<p>3）口令生命周期：最长使用90天，定期强制更换，禁止永久不更换；</p>
+<p>4）登录锁定：连续登录失败5次锁定账号，锁定时长≥15分钟；</p>
+<p>5）账号唯一性：一人一号，禁止多人共用账号，定期清理闲置、匿名、测试账号；</p>
+<p>6）权限最小化：区分超级管理员、运维、审计只读账号，禁止普通账号拥有最高权限。</p>
+<h3 id="22">2.2 时间与日志审计</h3>
+<p>1）所有设备启用NTP时间同步，统一全网时钟，保证日志溯源一致；</p>
+<p>2）开启全程审计日志：登录日志、配置修改日志、操作日志、安全告警日志；</p>
+<p>3）日志本地留存+远端上传至SIEM/日志服务器，留存时长满足等保≥6个月；</p>
+<p>4）禁止清空、篡改、覆盖审计日志，开启日志防删除保护。</p>
+<h3 id="23">2.3 远程管理安全</h3>
+<p>1）关闭所有不安全明文协议：Telnet、HTTP、FTP、SNMPv1/v2c；</p>
+<p>2）仅启用加密管理协议：SSHv2、HTTPS、SNMPv3；</p>
+<p>3）配置管理ACL策略，仅允许指定运维网段、堡垒机地址访问设备管理端口；</p>
+<p>4）开启会话空闲超时，超时时间5\~15分钟，杜绝长期挂管风险。</p>
+<h3 id="24">2.4 备份与防护</h3>
+<p>1）定期自动备份设备配置、系统配置，备份文件加密存储；</p>
+<p>2）系统/设备固件升级至稳定安全版本，关闭自动升级功能；</p>
+<p>3）开启基础防攻击策略：防扫描、防洪水攻击、ARP防护、异常登录告警。</p>
+<h2 id="3-waf">3 网络设备专项基线（交换机/路由器/防火墙/WAF/堡垒机）</h2>
+<h3 id="31">3.1 交换机、路由器基线</h3>
+<h4 id="311">3.1.1 服务与端口加固</h4>
+<p>1）关闭闲置服务：DHCP、UPnP、设备发现协议、广播报文响应、ICMP重定向；</p>
+<p>2）未使用物理端口全部shutdown，划入隔离VLAN，关闭端口自动协商；</p>
+<p>3）关闭无效Trunk端口，仅业务端口放行指定VLAN；</p>
+<p>4）禁用IP源路由、路由重定向等高危功能。</p>
+<h4 id="312">3.1.2 安全策略加固</h4>
+<p>1）配置端口安全，绑定合法MAC地址，限制端口最大接入终端数；</p>
+<p>2）启用VLAN隔离，禁止未授权VLAN互通；</p>
+<p>3）清理无效、过期、冗余配置与路由条目，保证配置精简合规；</p>
+<p>4）禁止配置any-any放行规则，严格执行最小访问权限。</p>
+<h4 id="313">3.1.3 核查方式</h4>
+<p>1）华为/H3C：display current-configuration 逐项核查；</p>
+<p>2）Cisco：show running-config 逐项核查；</p>
+<p>3）核查是否存在Telnet、弱密码、开放管理网段、未关闭闲置端口等违规项。</p>
+<h3 id="32">3.2 防火墙基线</h3>
+<p>1）所有安全策略遵循最小权限原则，无无用、宽松策略；</p>
+<p>2）关闭HTTP明文管理，仅保留HTTPS+SSH加密管理；</p>
+<p>3）开启入侵防御、病毒防护、URL过滤、抗攻击功能；</p>
+<p>4）禁止外网直接访问设备管理口，管理口仅内网运维网段可达；</p>
+<p>5）定期清理过期策略、无效黑名单、冗余地址库；</p>
+<p>6）策略变更全程留痕，留存变更记录与审批记录。</p>
+<h3 id="33-waf">3.3 WAF基线</h3>
+<p>1）默认开启SQL注入、XSS跨站、恶意爬虫、接口攻击、越权访问防护规则；</p>
+<p>2）关闭多余管理端口与测试服务，限制后台访问IP；</p>
+<p>3）开启网站访问日志、攻击日志记录，日志远端同步；</p>
+<p>4）定期更新特征库，修复设备高危漏洞；</p>
+<p>5）禁止长期开启全局放行、全局豁免策略。</p>
+<h3 id="34">3.4 堡垒机基线</h3>
+<p>1）所有网络设备、服务器运维操作全部纳入堡垒机管控，禁止直连运维；</p>
+<p>2）开启运维录像、命令审计、登录审计、文件传输审计；</p>
+<p>3）严格划分运维权限，按岗位授权，禁止超权限分配；</p>
+<p>4）闲置账号、离职人员账号即时注销；</p>
+<p>5）审计日志、录像文件长期归档，不可随意删除。</p>
+<h2 id="4-windowslinux">4 服务器安全基线（Windows+Linux通用专项）</h2>
+<h3 id="41-windows">4.1 Windows服务器基线</h3>
+<h4 id="411">4.1.1 账号安全</h4>
+<p>1）禁用Guest、匿名账号，删除多余测试账号；</p>
+<p>2）Administrator可重命名，禁止使用默认账号长期运维；</p>
+<p>3）开启密码策略：复杂度启用、密码最长使用90天、最短使用1天；</p>
+<p>4）开启登录失败锁定策略，防止暴力破解。</p>
+<h4 id="412">4.1.2 系统安全加固</h4>
+<p>1）开启系统防火墙，关闭不必要端口与服务；</p>
+<p>2）开启系统自动更新（稳定补丁），定期修复系统漏洞；</p>
+<p>3）关闭远程桌面空密码登录，限制RDP访问IP网段；</p>
+<p>4）开启安全日志、系统日志、应用日志，日志留存≥6个月；</p>
+<p>5）禁用不必要共享文件夹，关闭SMB高危版本漏洞；</p>
+<p>6）安装主机安全防护软件、杀毒软件，实时防护。</p>
+<h3 id="42-linuxcentosubuntuuos">4.2 Linux服务器基线（CentOS/Ubuntu/麒麟/UOS）</h3>
+<h4 id="421">4.2.1 账号与认证</h4>
+<p>1）清空空密码用户，禁止root远程直接登录SSH；</p>
+<p>2）配置PAM密码复杂度策略、登录失败锁定策略；</p>
+<p>3）设置密码有效期90天，定期更换；</p>
+<p>4）清理无效系统账号、闲置业务账号。</p>
+<h4 id="422">4.2.2 服务与端口加固</h4>
+<p>1）关闭Telnet、FTP、rlogin等高危服务；</p>
+<p>2）SSH仅保留v2版本，修改默认端口可选，限制登录IP；</p>
+<p>3）关闭开机自启多余服务，遵循最小安装原则；</p>
+<p>4）防火墙放行最小业务端口，封禁高危端口对外暴露。</p>
+<h4 id="423">4.2.3 日志与权限安全</h4>
+<p>1）开启auditd审计服务，覆盖文件修改、权限变更、高危命令操作；</p>
+<p>2）关键目录（/etc、/bin、/sbin）权限收紧，禁止全局可写；</p>
+<p>3）配置NTP时间同步，统一系统时间；</p>
+<p>4）日志远端上传，本地定期备份，防止日志丢失、篡改。</p>
+<h2 id="5">5 资产上线基线核查流程（强制落地流程）</h2>
+<h3 id="51">5.1 上线前置要求</h3>
+<p>所有新入网网络设备、服务器，必须先接入隔离运维网段，完成基线加固、基线核查，<strong>核查不通过禁止接入生产业务网络</strong>。</p>
+<h3 id="52">5.2 标准核查步骤</h3>
+<p>1）资产初始化：运维人员按照本基线完成预加固；</p>
+<p>2）基线核查：通过自动化平台/脚本/人工逐项核查，生成核查报告；</p>
+<p>3）合规判定：高危项不合规立即整改，中低危项限期整改；</p>
+<p>4）复测验收：整改完成后二次基线核查，确认全部合规；</p>
+<p>5）入网归档：录入CMDB资产库，归档核查报告、整改记录；</p>
+<p>6）周期巡检：存量资产季度基线复检，动态更新合规状态。</p>
+<h3 id="53">5.3 红线管控规则</h3>
+<p>1）弱口令、明文协议开启、外网暴露管理口、空账号登录等高风险项，零容忍、不可豁免；</p>
+<p>2）未完成基线核查的资产，网络侧不予放通策略、不予分配业务权限；</p>
+<p>3）私自上线资产、绕过基线核查入网，纳入安全违规考核。</p>
+<h2 id="6">6 基线核查结果与整改闭环机制</h2>
+<h3 id="61">6.1 风险分级</h3>
+<p>高危风险：可直接被利用入侵、越权、获取设备控制权，立即整改；</p>
+<p>中危风险：存在安全隐患，可被恶意利用，3个工作日内整改；</p>
+<p>低危风险：配置不规范、不符合基线标准，7个工作日内优化整改。</p>
+<h3 id="62">6.2 整改闭环要求</h3>
+<p>1）核查报告明确：不合规项、风险等级、整改依据、加固操作方法；</p>
+<p>2）整改完成必须复测，以复测结果作为合规依据，杜绝口头整改；</p>
+<p>3）所有核查记录、整改记录、复测报告统一归档，用于等保核查、安全审计。</p>
+<h2 id="7">7 基线核查记录表（可直接复制使用）</h2>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>资产类型</th>
+<th>资产名称/IP</th>
+<th>核查基线模块</th>
+<th>合规状态</th>
+<th>不合规项描述</th>
+<th>风险等级</th>
+<th>整改措施</th>
+<th>整改完成时间</th>
+<th>复测结果</th>
+<th>核查人</th>
+<th>核查日期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td></td>
+<td></td>
+<td>账号口令安全</td>
+<td>合规/不合规</td>
+<td></td>
+<td>高/中/低</td>
+<td></td>
+<td></td>
+<td>合格/不合格</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td></td>
+<td>远程管理安全</td>
+<td>合规/不合规</td>
+<td></td>
+<td>高/中/低</td>
+<td></td>
+<td></td>
+<td>合格/不合格</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>3</td>
+<td></td>
+<td></td>
+<td>服务端口加固</td>
+<td>合规/不合规</td>
+<td></td>
+<td>高/中/低</td>
+<td></td>
+<td></td>
+<td>合格/不合格</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>4</td>
+<td></td>
+<td></td>
+<td>日志审计配置</td>
+<td>合规/不合规</td>
+<td></td>
+<td>高/中/低</td>
+<td></td>
+<td></td>
+<td>合格/不合格</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>5</td>
+<td></td>
+<td></td>
+<td>安全策略与防护</td>
+<td>合规/不合规</td>
+<td></td>
+<td>高/中/低</td>
+<td></td>
+<td></td>
+<td>合格/不合格</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="8">8 附则</h2>
+<p>1）本基线规范自发布之日起执行，所有资产上线、巡检、整改均以此为标准；</p>
+<p>2）安全管理部门负责基线版本迭代更新，结合新规、漏洞动态优化；</p>
+<p>3）本规范由信息安全部负责解释与落地监督。</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/yanzhg" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.expand", "navigation.top", "content.code.copy", "content.code.annotate", "search.suggest", "search.highlight"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+        <script src="../../javascripts/mathjax-config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
